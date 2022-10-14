@@ -1,0 +1,174 @@
+/* screen - sign-up */
+
+.sign-up {
+  align-items: center;
+  background-color: var(--alto-2);
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  height: 844px;
+  width: 390px;
+}
+
+.sign-up .group-3 {
+  align-items: flex-start;
+  display: flex;
+  min-width: 390px;
+}
+
+.sign-up .header {
+  align-items: center;
+  background: linear-gradient(180deg, rgb(255, 255, 255) 0%, rgba(222.06, 222.06, 222.06, 0) 100%);
+  border: 1px none;
+  display: flex;
+  gap: 208px;
+  height: 100px;
+  min-width: 390px;
+  padding: 0 12px;
+}
+
+.sign-up .vector {
+  cursor: pointer;
+  height: 82px;
+  width: 82px;
+}
+
+.sign-up .openmojihamburger-menu {
+  height: 72px;
+  width: 72px;
+}
+
+.sign-up .title {
+  letter-spacing: 0;
+  margin-right: 14.0px;
+  margin-top: 75px;
+  min-height: 29px;
+  min-width: 278px;
+  text-align: center;
+}
+
+.sign-up .group-4 {
+  align-items: flex-start;
+  display: flex;
+  height: 387px;
+  margin-left: 1.0px;
+  margin-top: 60px;
+  min-width: 315px;
+}
+
+.sign-up .sign-up-1 {
+  align-items: flex-start;
+  border: 1px none;
+  display: flex;
+  flex-direction: column;
+  min-height: 387px;
+  width: 315px;
+}
+
+.sign-up .full-name {
+  letter-spacing: 0;
+  min-height: 23px;
+  text-shadow: 4px 4px 4px #00000040;
+  width: 163px;
+}
+
+.sign-up .rectangle {
+  background-color: var(--alto);
+  border: 1px solid;
+  border-color: var(--black);
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px #00000040;
+  height: 42px;
+  margin-left: -1px;
+  margin-top: 6px;
+  width: 317px;
+}
+
+.sign-up .e-mail {
+  letter-spacing: 0;
+  margin-top: 11px;
+  min-height: 23px;
+  text-shadow: 4px 4px 4px #00000040;
+  width: 114px;
+}
+
+.sign-up .rectangle-7 {
+  background-color: var(--alto);
+  border: 1px solid;
+  border-color: var(--black);
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px #00000040;
+  height: 42px;
+  margin-left: -1px;
+  margin-top: 11px;
+  width: 317px;
+}
+
+.sign-up .password {
+  letter-spacing: 0;
+  margin-top: 12px;
+  min-height: 23px;
+  text-shadow: 4px 4px 4px #00000040;
+  width: 131px;
+}
+
+.sign-up .rectangle-10 {
+  background-color: var(--alto);
+  border: 1px solid;
+  border-color: var(--black);
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px #00000040;
+  height: 42px;
+  margin-left: -1px;
+  margin-top: 7px;
+  width: 317px;
+}
+
+.sign-up .re-enter-password {
+  letter-spacing: 0;
+  margin-top: 12px;
+  min-height: 23px;
+  text-shadow: 4px 4px 4px #00000040;
+  width: 292px;
+}
+
+.sign-up .group-5 {
+  align-items: flex-start;
+  display: flex;
+  margin-right: 22.0px;
+  margin-top: 59px;
+  min-width: 234px;
+}
+
+.sign-up .create-account {
+  align-items: flex-start;
+  border: 1px none;
+  cursor: pointer;
+  display: flex;
+  min-width: 234px;
+}
+
+.sign-up .overlap-group {
+  align-items: flex-start;
+  background-color: var(--black);
+  border-radius: 15px;
+  box-shadow: 7px 7px 10px 1px #00000040;
+  display: flex;
+  gap: 18px;
+  height: 56px;
+  min-width: 234px;
+  padding: 13px 22px;
+}
+
+.sign-up .icon-lock {
+  height: 24px;
+  width: 21px;
+}
+
+.sign-up .create-account-1 {
+  align-self: center;
+  letter-spacing: 0;
+  min-height: 18px;
+  min-width: 135px;
+  text-align: center;
+}

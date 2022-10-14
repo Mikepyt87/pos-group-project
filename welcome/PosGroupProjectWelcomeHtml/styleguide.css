@@ -1,0 +1,17 @@
+:root { 
+  --black: #000000;
+  --bon-jour: #e2e2e2;
+  --white: #ffffff;
+ 
+  --font-size-xxl2: 24px;
+  --font-size-xxxxl2: 36px;
+ 
+  --font-family-courier_new-regular: "Courier New-Regular", Helvetica;
+}
+.couriernew-regular-normal-black-24px {
+  color: var(--black);
+  font-family: var(--font-family-courier_new-regular);
+  font-size: var(--font-size-xxl2);
+  font-style: normal;
+  font-weight: 400;
+}
