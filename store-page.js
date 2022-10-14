@@ -1,4 +1,4 @@
-// "use strict";
+"use strict";
 
 // const itemsForSale = [
 //   {
@@ -36,6 +36,7 @@ const catalog = [
     model: "Macbook",
     cost: "1200.00",
     quantity: 4,
+    img: "/assets/gamertop.svg",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam ducimus amet ipsum totam fugiat dolore ex nulla impedit. Vitae pariatur architecto nobis? Repellendus voluptate est doloribus veniam quaerat eaque!",
   },
@@ -121,3 +122,40 @@ const catalog = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam ducimus amet ipsum totam fugiat dolore ex nulla impedit. Vitae pariatur architecto nobis? Repellendus voluptate est doloribus veniam quaerat eaque!",
   },
 ];
+
+// selectors
+const productsContainer = document.querySelector(".products-container");
+
+const buildProducts = () => {
+  // clear everything in the ul before we rebuild:
+  productsContainer.innerHTML = "";
+  // loop through productsContainer, rebuild HTML:
+  catalog.forEach((item) => {
+    // create elements
+    const newProduct = document.createElement("div");
+    const newImg = document.createElement("img");
+    const newDiv = document.createElement("div");
+    const productName = document.createElement("p");
+    const productCost = document.createElement("p");
+    const productDescription = document.createElement("p");
+
+    // modify elements
+    // style
+    newProduct.classList.add("product"); //
+    newDiv.classList.add("name-price");
+    productDescription.classList.add("description");
+
+    // values (text content)
+    productName.textContent = item.model;
+    productCost.textContent = item.cost;
+    productDescription.textContent = item.description;
+
+    // add elements to HTML
+    newProduct.append(newImg, newDiv, productDescription);
+    newDiv.append(productName, productCost);
+    productsContainer.append(newProduct);
+  });
+};
+
+//call upon page loading initially
+buildProducts();
