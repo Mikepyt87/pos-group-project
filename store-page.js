@@ -206,7 +206,7 @@ const buildProductPage = () => {
     price.classList.add("product-price");
 
     // values (text content)
-    newH2.textContenet = item.cost;
+    newH2.textContent = `${item.brand} ${item.model}`;
     description.textContent = item.description;
     price.textContent = item.cost;
 
