@@ -120,6 +120,7 @@ const buildProducts = () => {
   catalog.forEach((item, llama) => {
     // create elements
     const newProduct = document.createElement("div");
+    // const selector = document.createElement("div");
     const newImg = document.createElement("img");
     const newDiv = document.createElement("div");
     const productName = document.createElement("p");
@@ -128,10 +129,11 @@ const buildProducts = () => {
 
     // modify elements
     // style
-    newProduct.classList.add("product"); //
+    newProduct.classList.add("product");
     newDiv.classList.add("name-price");
     productDescription.classList.add("description");
     newImg.classList.add("product-images");
+    // selector.classList.add("product-selector");
 
     // Attribute
     newImg.setAttribute("src", item.img);
@@ -145,6 +147,7 @@ const buildProducts = () => {
 
     // add elements to HTML
     newProduct.append(newImg, newDiv, productDescription);
+    // newSpan.append(newImg, newDiv, productDescription);
     newDiv.append(productName, productCost);
     productsContainer.append(newProduct);
   });
@@ -154,17 +157,22 @@ const buildProducts = () => {
 buildProducts();
 
 //main page selectors
-const productContainer = document.querySelector(".product");
+const eachProduct = document.querySelector(".product");
+const allProducts = document.querySelector(".products-container");
 const product = document.querySelector(".product-page");
+
 let foundIndex = null;
 
-product.addEventListener("click", (e) => {
+allProducts.addEventListener("click", (e) => {
   console.dir(e.target);
 
-  // console.log(foundIndex);
-  // // if (e.target.classList.contains("product")) {
-  // //   product.style.display = "block";
-  // //   foundIndex = e.target.getAttribute("data-index");
-  // console.log(foundIndex);
-  // }
+  console.log(foundIndex);
+  if (
+    e.target.parentNode.classList.contains("product") ||
+    e.target.parentNode.parentNode.classList.contains("product")
+  ) {
+    product.style.display = "block";
+    foundIndex = e.target.getAttribute("data-index");
+    console.log(foundIndex);
+  }
 });
