@@ -37,8 +37,8 @@ const catalog = [
     cost: "1200.00",
     quantity: 4,
     img: "/assets/gamertop.svg",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam ducimus amet ipsum totam fugiat dolore ex nulla impedit. Vitae pariatur architecto nobis? Repellendus voluptate est doloribus veniam quaerat eaque!",
+    alt: "laptop",
+    description: "It's shing so you know it's good...",
   },
   {
     productType: "Laptop",
@@ -46,8 +46,9 @@ const catalog = [
     model: "Stealth Blade",
     cost: "2499.00",
     quantity: 2,
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam ducimus amet ipsum totam fugiat dolore ex nulla impedit. Vitae pariatur architecto nobis? Repellendus voluptate est doloribus veniam quaerat eaque!",
+    img: "/assets/gamertop.svg",
+    alt: "laptop",
+    description: "It's got a light up keyboard need I say more...",
   },
   {
     productType: "Laptop",
@@ -55,6 +56,8 @@ const catalog = [
     model: "Gametop",
     cost: "450.00",
     quantity: 3,
+    img: "/assets/gamertop.svg",
+    alt: "laptop",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam ducimus amet ipsum totam fugiat dolore ex nulla impedit. Vitae pariatur architecto nobis? Repellendus voluptate est doloribus veniam quaerat eaque!",
   },
@@ -64,6 +67,8 @@ const catalog = [
     model: "A40",
     cost: "175.00",
     quantity: 5,
+    img: "/assets/gamertop.svg",
+    alt: "laptop",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam ducimus amet ipsum totam fugiat dolore ex nulla impedit. Vitae pariatur architecto nobis? Repellendus voluptate est doloribus veniam quaerat eaque!",
   },
@@ -73,6 +78,8 @@ const catalog = [
     model: "A30",
     cost: "125.00",
     quantity: 3,
+    img: "/assets/gamertop.svg",
+    alt: "laptop",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam ducimus amet ipsum totam fugiat dolore ex nulla impedit. Vitae pariatur architecto nobis? Repellendus voluptate est doloribus veniam quaerat eaque!",
   },
@@ -82,6 +89,8 @@ const catalog = [
     model: "Zero",
     cost: "89.99",
     quantity: 3,
+    img: "/assets/gamertop.svg",
+    alt: "laptop",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam ducimus amet ipsum totam fugiat dolore ex nulla impedit. Vitae pariatur architecto nobis? Repellendus voluptate est doloribus veniam quaerat eaque!",
   },
@@ -91,6 +100,8 @@ const catalog = [
     model: "Headset",
     cost: "99.99",
     quantity: 4,
+    img: "/assets/gamertop.svg",
+    alt: "laptop",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam ducimus amet ipsum totam fugiat dolore ex nulla impedit. Vitae pariatur architecto nobis? Repellendus voluptate est doloribus veniam quaerat eaque!",
   },
@@ -100,6 +111,8 @@ const catalog = [
     model: "Gamer",
     cost: "75.00",
     quantity: 6,
+    img: "/assets/gamertop.svg",
+    alt: "laptop",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam ducimus amet ipsum totam fugiat dolore ex nulla impedit. Vitae pariatur architecto nobis? Repellendus voluptate est doloribus veniam quaerat eaque!",
   },
@@ -109,6 +122,8 @@ const catalog = [
     model: "RTX4090",
     cost: "1599.00",
     quantity: 2,
+    img: "/assets/gamertop.svg",
+    alt: "laptop",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam ducimus amet ipsum totam fugiat dolore ex nulla impedit. Vitae pariatur architecto nobis? Repellendus voluptate est doloribus veniam quaerat eaque!",
   },
@@ -118,6 +133,8 @@ const catalog = [
     model: "Roblox",
     cost: "75.00",
     quantity: 8,
+    img: "/assets/gamertop.svg",
+    alt: "laptop",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam ducimus amet ipsum totam fugiat dolore ex nulla impedit. Vitae pariatur architecto nobis? Repellendus voluptate est doloribus veniam quaerat eaque!",
   },
@@ -144,6 +161,11 @@ const buildProducts = () => {
     newProduct.classList.add("product"); //
     newDiv.classList.add("name-price");
     productDescription.classList.add("description");
+    newImg.classList.add("product-images");
+
+    // Attribute
+    newImg.setAttribute("src", item.img);
+    newImg.setAttribute("alt", item.alt);
 
     // values (text content)
     productName.textContent = item.model;

@@ -1,4 +1,4 @@
-/*reset*/
+/*resets*/
 body,
 p,
 h1 {
@@ -6,22 +6,79 @@ h1 {
   padding: 0;
 }
 
+body {
+  background-color: #e2e2e2;
+}
+
+header {
+  /* border-bottom: 4px solid black; */
+  background-color: #e2e2e2;
+  position: fixed;
+  padding: 0 0 85px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.back-arrow-and-preference {
+  width: 55px;
+  height: 100%;
+  margin: 10px;
+}
+
+.search-bar {
+  width: 360px;
+  height: 100%;
+  margin: 10px 10px 0 0;
+}
+
+main {
+  padding: 205px 0 0 0;
+}
+
+.hot-sale {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 25px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+}
+
 .products-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  /* wraps products around screen */
+}
+
+.product {
+  margin: 10px 10px 30px 10px;
+  /* spaces products from each other */
+}
+
+.product-images {
+  width: 230px;
+  height: 210px;
+  margin: 0;
 }
 
 .name-price {
   display: flex;
   justify-content: space-between;
-  width: 160px;
-  font-size: 20px;
+  width: 220px;
+  font-size: 18px;
   font-weight: bold;
+  margin: 0 0 0 10px;
+  font-family: "Montserrat", sans-serif;
+  /* positions and spaces the name and price text */
 }
 
 .description {
   width: 200px;
-}
-
-.laptop {
+  margin: 0 0 0 10px;
+  font-family: "Courier New", Courier, monospace;
+  /* width of the paragraphs */
 }
