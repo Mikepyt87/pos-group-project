@@ -1,34 +1,4 @@
 "use strict";
-
-// const itemsForSale = [
-//   {
-//     name: "Toshiba",
-//     price: 10,
-//     description: "It's shiny so you know it's good...",
-//   },
-//   {
-//     name: "Gaming Laptop",
-//     price: 100,
-//     description: "It's shiny so you know it's good...",
-//   },
-// ];
-
-// // selectors
-// const itemsContainer = document.querySelector(".items-for-sale");
-
-// const cart = [];
-
-// itemsContainer.addEventListener("click", (e) => {
-//   if (e.target.classList.contains("product")) {
-//     cart.push(itemsForSale[0]);
-//     const sum = cart.reduce(
-//       (previousValue, currentValue) => previousValue + currentValue.price,
-//       0
-//     );
-//     console.log(sum); // logs 6
-//     console.log(cart);
-//   }
-// });
 const catalog = [
   {
     productType: "Laptop",
@@ -147,7 +117,7 @@ const buildProducts = () => {
   // clear everything in the ul before we rebuild:
   productsContainer.innerHTML = "";
   // loop through productsContainer, rebuild HTML:
-  catalog.forEach((item) => {
+  catalog.forEach((item, llama) => {
     // create elements
     const newProduct = document.createElement("div");
     const newImg = document.createElement("img");
@@ -166,6 +136,7 @@ const buildProducts = () => {
     // Attribute
     newImg.setAttribute("src", item.img);
     newImg.setAttribute("alt", item.alt);
+    newProduct.setAttribute("data-index", llama);
 
     // values (text content)
     productName.textContent = item.model;
@@ -181,3 +152,19 @@ const buildProducts = () => {
 
 //call upon page loading initially
 buildProducts();
+
+//main page selectors
+const productContainer = document.querySelector(".product");
+const product = document.querySelector(".product-page");
+let foundIndex = null;
+
+product.addEventListener("click", (e) => {
+  console.dir(e.target);
+
+  // console.log(foundIndex);
+  // // if (e.target.classList.contains("product")) {
+  // //   product.style.display = "block";
+  // //   foundIndex = e.target.getAttribute("data-index");
+  // console.log(foundIndex);
+  // }
+});
