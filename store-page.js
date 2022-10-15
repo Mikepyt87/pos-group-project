@@ -126,6 +126,7 @@ const catalog = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam ducimus amet ipsum totam fugiat dolore ex nulla impedit. Vitae pariatur architecto nobis? Repellendus voluptate est doloribus veniam quaerat eaque!",
   },
+
   {
     productType: "Tablet",
     brand: "Generic",

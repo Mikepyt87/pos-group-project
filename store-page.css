@@ -47,6 +47,27 @@ h1 {
   font-family: "Montserrat", sans-serif;
 }
 
+.product-description {
+  height: 100%;
+  width: 100%;
+  background-color: #e2e2e2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  /* display: none; */
+}
+
+.larger-image {
+  width: 250px;
+  margin: 50px;
+}
+
+.border {
+  border-style: solid;
+  border-width: 1px 0px;
+}
+
 .products-container {
   display: flex;
   flex-wrap: wrap;
