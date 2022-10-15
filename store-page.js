@@ -114,7 +114,7 @@ const catalog = [
 const productsContainer = document.querySelector(".products-container");
 
 const buildProducts = () => {
-  // clear everything in the ul before we rebuild:
+  // clear everything in the element before we rebuild:
   productsContainer.innerHTML = "";
   // loop through productsContainer, rebuild HTML:
   catalog.forEach((item, llama) => {
@@ -176,3 +176,45 @@ allProducts.addEventListener("click", (e) => {
     console.log(foundIndex);
   }
 });
+
+// selectors
+const productPage = document.querySelector(".product-page");
+
+const buildProductPage = () => {
+  // clear everything in the element before we rebuild:
+  productPage.innerHTML = "";
+  // loop through productsContainer, rebuild HTML:
+  catalog.forEach((item) => {
+    // create elements
+    // const border = document.createElement("div");
+    const newImg = document.createElement("img");
+    // const productAbout = document.createElement("div");
+    const newH2 = document.createElement("h2");
+    const description = document.createElement("p");
+    const price = document.createElement("p");
+
+    // modify elements
+    // style
+    // border.classList.add("border");
+    newImg.classList.add("larger-image");
+    // productAbout.classList.add("product-about");
+    newH2.classList.add("product-name");
+    description.classList.add("product-description");
+    price.classList.add("product-price");
+
+    // Attribute
+    newImg.setAttribute("src", item.img);
+    newImg.setAttribute("alt", item.alt);
+
+    // values (text content)
+    newH2.textContenet = `${item.brand} ${item.model}`;
+    description.textContent = item.description;
+    price.textContent = item.cost;
+
+    // add elements to HTML
+    border.append(newImg);
+    productPage.append(border);
+    productAbout.append(description, price);
+  });
+};
+// buildProductPage();

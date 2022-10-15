@@ -52,7 +52,7 @@ main {
   top: 50%;
   transform: translate(-50%, -50%);
   position: fixed;
-  display: none;
+  /* display: none; */
 }
 
 .product-header {
@@ -129,7 +129,7 @@ main {
   font-weight: 600;
 }
 
-.product-gamertop {
+.product-name {
   margin-left: 55px;
 }
 
