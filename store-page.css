@@ -8,6 +8,7 @@ h1 {
 
 body {
   background-color: #e2e2e2;
+  font-family: "Montserrat", sans-serif;
 }
 
 header {
@@ -43,11 +44,7 @@ main {
   font-family: "Courier New", Courier, monospace;
 }
 
-h1 {
-  font-family: "Montserrat", sans-serif;
-}
-
-.product-description {
+.product-page {
   height: 100%;
   width: 100%;
   background-color: #e2e2e2;
@@ -66,7 +63,6 @@ h1 {
 }
 
 .heading-text {
-  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 20px;
 }
@@ -106,7 +102,7 @@ h1 {
   font-size: 18px;
   font-weight: bold;
   margin: 0 0 0 10px;
-  font-family: "Montserrat", sans-serif;
+
   /* positions and spaces the name and price text */
 }
 
@@ -115,4 +111,56 @@ h1 {
   margin: 0 0 0 10px;
   font-family: "Courier New", Courier, monospace;
   /* width of the paragraphs */
+}
+
+.free-shipping {
+  display: flex;
+  background-color: #fa5e5e;
+  width: 175px;
+  height: 30px;
+  border-radius: 15px;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+}
+
+.shipping {
+  color: white;
+  font-weight: 600;
+}
+
+.product-gamertop {
+  margin-left: 55px;
+}
+
+.product-gamertop,
+p {
+  margin: 20px;
+}
+
+.product-description {
+  height: 15%;
+  border-bottom: solid 1px black;
+}
+
+.gamertop-price {
+  font-weight: 600;
+}
+
+.add-to-cart {
+  margin: 25% 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.add-item {
+  width: 181px;
+  height: 60px;
+  font-weight: 600;
+  background-color: #fa5e5e;
+  border: none;
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  font-size: 20px;
 }

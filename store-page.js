@@ -56,7 +56,7 @@ const catalog = [
     model: "Gametop",
     cost: "$" + 450.0,
     quantity: 3,
-    img: "/assets/gamertop.svg",
+    img: "assets/gamertop.svg",
     alt: "laptop",
     description: "Only computer gamers should use. Besides the previous 2.",
   },
