@@ -179,42 +179,40 @@ allProducts.addEventListener("click", (e) => {
 
 // selectors
 const productPage = document.querySelector(".product-page");
+const border = document.querySelector(".border");
+const productAbout = document.querySelector(".product-about");
 
 const buildProductPage = () => {
   // clear everything in the element before we rebuild:
-  productPage.innerHTML = "";
+  productAbout.innerHTML = "";
+
   // loop through productsContainer, rebuild HTML:
   catalog.forEach((item) => {
     // create elements
-    // const border = document.createElement("div");
     const newImg = document.createElement("img");
-    // const productAbout = document.createElement("div");
     const newH2 = document.createElement("h2");
     const description = document.createElement("p");
     const price = document.createElement("p");
-
-    // modify elements
-    // style
-    // border.classList.add("border");
-    newImg.classList.add("larger-image");
-    // productAbout.classList.add("product-about");
-    newH2.classList.add("product-name");
-    description.classList.add("product-description");
-    price.classList.add("product-price");
 
     // Attribute
     newImg.setAttribute("src", item.img);
     newImg.setAttribute("alt", item.alt);
 
+    // modify elements
+    // style
+    newImg.classList.add("larger-image");
+    newH2.classList.add("product-name");
+    description.classList.add("product-description");
+    price.classList.add("product-price");
+
     // values (text content)
-    newH2.textContenet = `${item.brand} ${item.model}`;
+    newH2.textContenet = item.cost;
     description.textContent = item.description;
     price.textContent = item.cost;
 
     // add elements to HTML
     border.append(newImg);
-    productPage.append(border);
-    productAbout.append(description, price);
+    productAbout.append(newH2, description, price);
   });
 };
-// buildProductPage();
+buildProductPage();
