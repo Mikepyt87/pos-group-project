@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="storeHome">
+      <i class="fa-solid fa-cart-shopping fa-5x"></i>
+      <!-- change the 5x to resize cart icon (4x is smaller, 6x is bigger, etc) -->
+      <div id="productCatalog">
+        <div class="product">
+            <p class="productName">VivoBook</p>
+            <p class="productPrice">$899.99</p>
+      </div>
+    </section>
+    <section id="checkout">
+      <img src="assets/back-arrow.svg" alt="back arrow" id="cartBackArrow">
+      <div id="productsInCart">
+        <div class="productCheckout">
+          <p class="productNameCheckout">VivoBook</p>
+          <p class="productPriceCheckout">$899.99</p>
+        </div>
+      </div>
+      <p id="subtotal">Subtotal: $0.00</p>
+      <p id="tax">Tax: $0.00</p>
+      <p id="total">Total: $0.00</p>
+      <button class="checkoutButton">Check out</button>
+    </section>
+    <section id="shippingInfo">
+      <form>
+        <section>
+          <label for="e-mail"></label>
+          <input type="email" name="e-mail" id="e-mail" placeholder="E-Mail" />
+          <label for="first_name"></label>
+          <input
+            type="text"
+            name="first_name"
+            id="first_name"
+            placeholder="First name"
+          />
+          <label for="last_name"></label>
+          <input
+            type="text"
+            name="last_name"
+            id="last_name"
+            placeholder="Last name"
+          />
+          <label for="address_line1"></label>
+          <input
+            type="text"
+            name="address_line1"
+            id="address_line1"
+            placeholder="Address line 1"
+          />
+          <label for="address_line2"></label>
+          <input
+            type="text"
+            name="address_line2"
+            id="address_line2"
+            placeholder="Address line 2 (optional)"
+          />
+          <label for="city"></label>
+          <input type="text" name="city" id="city" placeholder="City" />
+          <label for="state"></label>
+          <select name="state" id="state">
+            <option value="al">AL</option>
+            <option value="ak">AK</option>
+            <option value="az">AZ</option>
+            <option value="ar">AR</option>
+            <option value="ca">CA</option>
+            <option value="co">CO</option>
+            <option value="ct">CT</option>
+            <option value="de">DE</option>
+            <option value="dc">DC</option>
+            <option value="fl">FL</option>
+            <option value="ga">GA</option>
+            <option value="gu">GU</option>
+            <option value="hi">HI</option>
+            <option value="id">ID</option>
+            <option value="il">IL</option>
+            <option value="in">IN</option>
+            <option value="ia">IA</option>
+            <option value="ks">KS</option>
+            <option value="ky">KY</option>
+            <option value="la">LA</option>
+            <option value="me">ME</option>
+            <option value="md">MD</option>
+            <option value="ma">MA</option>
+            <option value="mi">MI</option>
+            <option value="mn">MN</option>
+            <option value="ms">MS</option>
+            <option value="mo">MO</option>
+            <option value="mt">MT</option>
+            <option value="ne">NE</option>
+            <option value="nv">NV</option>
+            <option value="nh">NH</option>
+            <option value="nj">NJ</option>
+            <option value="nm">NM</option>
+            <option value="ny">NY</option>
+            <option value="nc">NC</option>
+            <option value="nd">ND</option>
+            <option value="oh">OH</option>
+            <option value="ok">OK</option>
+            <option value="or">OR</option>
+            <option value="pa">PA</option>
+            <option value="pr">PR</option>
+            <option value="ri">RI</option>
+            <option value="sc">SC</option>
+            <option value="sd">SD</option>
+            <option value="tn">TN</option>
+            <option value="tx">TX</option>
+            <option value="ut">UT</option>
+            <option value="vt">VT</option>
+            <option value="vi">VI</option>
+            <option value="va">VA</option>
+            <option value="wa">WA</option>
+            <option value="wv">WV</option>
+            <option value="wi">WI</option>
+            <option value="wy">WY</option>
+          </select>
+          <label for="zip_code"></label>
+          <input
+            type="text"
+            name="zip_code"
+            id="zip_code"
+            placeholder="Zip code"
+          />
+        </section>
+        <label for="save_billing_address"></label>
+        <input
+          type="checkbox"
+          name="save_billing_address"
+          id="save_billing_address"
+        />
+        <section>
+          <label for="e-mail"></label>
+          <input type="email" name="e-mail" id="e-mail" placeholder="E-Mail" />
+          <label for="first_name"></label>
+          <input
+            type="text"
+            name="first_name"
+            id="first_name"
+            placeholder="First name"
+          />
+          <label for="last_name"></label>
+          <input
+            type="text"
+            name="last_name"
+            id="last_name"
+            placeholder="Last name"
+          />
+          <label for="address_line1"></label>
+          <input
+            type="text"
+            name="address_line1"
+            id="address_line1"
+            placeholder="Address line 1"
+          />
+          <label for="address_line2"></label>
+          <input
+            type="text"
+            name="address_line2"
+            id="address_line2"
+            placeholder="Address line 2 (optional)"
+          />
+          <label for="city"></label>
+          <input type="text" name="city" id="city" placeholder="City" />
+          <label for="state"></label>
+          <select name="state" id="state">
+            <option value="al">AL</option>
+            <option value="ak">AK</option>
+            <option value="az">AZ</option>
+            <option value="ar">AR</option>
+            <option value="ca">CA</option>
+            <option value="co">CO</option>
+            <option value="ct">CT</option>
+            <option value="de">DE</option>
+            <option value="dc">DC</option>
+            <option value="fl">FL</option>
+            <option value="ga">GA</option>
+            <option value="gu">GU</option>
+            <option value="hi">HI</option>
+            <option value="id">ID</option>
+            <option value="il">IL</option>
+            <option value="in">IN</option>
+            <option value="ia">IA</option>
+            <option value="ks">KS</option>
+            <option value="ky">KY</option>
+            <option value="la">LA</option>
+            <option value="me">ME</option>
+            <option value="md">MD</option>
+            <option value="ma">MA</option>
+            <option value="mi">MI</option>
+            <option value="mn">MN</option>
+            <option value="ms">MS</option>
+            <option value="mo">MO</option>
+            <option value="mt">MT</option>
+            <option value="ne">NE</option>
+            <option value="nv">NV</option>
+            <option value="nh">NH</option>
+            <option value="nj">NJ</option>
+            <option value="nm">NM</option>
+            <option value="ny">NY</option>
+            <option value="nc">NC</option>
+            <option value="nd">ND</option>
+            <option value="oh">OH</option>
+            <option value="ok">OK</option>
+            <option value="or">OR</option>
+            <option value="pa">PA</option>
+            <option value="pr">PR</option>
+            <option value="ri">RI</option>
+            <option value="sc">SC</option>
+            <option value="sd">SD</option>
+            <option value="tn">TN</option>
+            <option value="tx">TX</option>
+            <option value="ut">UT</option>
+            <option value="vt">VT</option>
+            <option value="vi">VI</option>
+            <option value="va">VA</option>
+            <option value="wa">WA</option>
+            <option value="wv">WV</option>
+            <option value="wi">WI</option>
+            <option value="wy">WY</option>
+          </select>
+          <label for="zip_code"></label>
+          <input
+            type="text"
+            name="zip_code"
+            id="zip_code"
+            placeholder="Zip code"
+          />
+        </section>
+        <section id="creditCardOption">
+          <label for="card_number"></label>
+          <input
+            type="text"
+            name="card_number"
+            id="card_number"
+            placeholder="Card number"
+          />
+          <label for="state"></label>
+          <select name="state" id="state">
+            <option value="al">AL</option>
+            <option value="ak">AK</option>
+            <option value="az">AZ</option>
+            <option value="ar">AR</option>
+            <option value="ca">CA</option>
+            <option value="co">CO</option>
+            <option value="ct">CT</option>
+            <option value="de">DE</option>
+            <option value="dc">DC</option>
+            <option value="fl">FL</option>
+            <option value="ga">GA</option>
+            <option value="gu">GU</option>
+            <option value="hi">HI</option>
+            <option value="id">ID</option>
+            <option value="il">IL</option>
+            <option value="in">IN</option>
+            <option value="ia">IA</option>
+            <option value="ks">KS</option>
+            <option value="ky">KY</option>
+            <option value="la">LA</option>
+            <option value="me">ME</option>
+            <option value="md">MD</option>
+            <option value="ma">MA</option>
+            <option value="mi">MI</option>
+            <option value="mn">MN</option>
+            <option value="ms">MS</option>
+            <option value="mo">MO</option>
+            <option value="mt">MT</option>
+            <option value="ne">NE</option>
+            <option value="nv">NV</option>
+            <option value="nh">NH</option>
+            <option value="nj">NJ</option>
+            <option value="nm">NM</option>
+            <option value="ny">NY</option>
+            <option value="nc">NC</option>
+            <option value="nd">ND</option>
+            <option value="oh">OH</option>
+            <option value="ok">OK</option>
+            <option value="or">OR</option>
+            <option value="pa">PA</option>
+            <option value="pr">PR</option>
+            <option value="ri">RI</option>
+            <option value="sc">SC</option>
+            <option value="sd">SD</option>
+            <option value="tn">TN</option>
+            <option value="tx">TX</option>
+            <option value="ut">UT</option>
+            <option value="vt">VT</option>
+            <option value="vi">VI</option>
+            <option value="va">VA</option>
+            <option value="wa">WA</option>
+            <option value="wv">WV</option>
+            <option value="wi">WI</option>
+            <option value="wy">WY</option>
+          </select>
+          <label for="month"></label>
+          <input type="month" name="month" id="month" />
+          <label for="text"></label>
+          <input
+            type="full_name"
+            name="full_name"
+            id="full_name"
+            placeholder="Name on card"
+          />
+          <label for="text"></label>
+          <input type="cvv" name="cvv" id="cvv" placeholder="CVV" />
+        </section>
+        <label for="save_payment_info"></label>
+        <input
+          type="checkbox"
+          name="save_payment_info"
+          id="save_payment_info"
+        />
+        <button>Continue</button>
+      </form>
+    </section>
+    <section id="orderConfirmation">
+      <p>Your confirmation number is</p>
+      <p>12345678</p>
+      <p>Confirmation #</p>
+      <p>12345678</p>
+      <p>Date Placed</p>
+      <p>10/15/2022</p>
+      <p>P.O. # Account</p>
+      <p>DJM12345</p>
+      <p>order placed by</p>
+      <p>Guest</p>
+      <p>Shipping Method</p>
+      <p>Ground</p>
+      <p>Payment Information</p>
+      <p>MastercardXXXX XXXXXXXX1234</p>
+      <p>Total</p>
+      <p>$0.00</p>
+    </section>
+    <!-- keep JS at the bottom -->
+    <script src="https://kit.fontawesome.com/73cad7b292.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

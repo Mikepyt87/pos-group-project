@@ -126,6 +126,7 @@ const buildProducts = () => {
     const productName = document.createElement("p");
     const productCost = document.createElement("p");
     const productDescription = document.createElement("p");
+    const newButton = document.createElement("button");
 
     // modify elements
     // style
@@ -144,9 +145,10 @@ const buildProducts = () => {
     productName.textContent = item.model;
     productCost.textContent = item.cost;
     productDescription.textContent = item.description;
+    newButton.textContent = "Add to cart";
 
     // add elements to HTML
-    newProduct.append(newImg, newDiv, productDescription);
+    newProduct.append(newImg, newDiv, productDescription, newButton);
     // newSpan.append(newImg, newDiv, productDescription);
     newDiv.append(productName, productCost);
     productsContainer.append(newProduct);
@@ -156,63 +158,76 @@ const buildProducts = () => {
 //call upon page loading initially
 buildProducts();
 
-//main page selectors
-const eachProduct = document.querySelector(".product");
-const allProducts = document.querySelector(".products-container");
-const product = document.querySelector(".product-page");
+// //main page selectors
+// const eachProduct = document.querySelector(".product");
+// const allProducts = document.querySelector(".products-container");
+// const product = document.querySelector(".product-page");
 
-let foundIndex = null;
+// let foundIndex = null;
 
-allProducts.addEventListener("click", (e) => {
-  console.dir(e.target);
+// allProducts.addEventListener("click", (e) => {
+//   console.dir(e.target);
 
-  console.log(foundIndex);
-  if (
-    e.target.parentNode.classList.contains("product") ||
-    e.target.parentNode.parentNode.classList.contains("product")
-  ) {
-    product.style.display = "block";
-    foundIndex = e.target.getAttribute("data-index");
-    console.log(foundIndex);
-  }
-});
+//   console.log(foundIndex);
+//   if (
+//     e.target.parentNode.classList.contains("product") ||
+//     e.target.parentNode.parentNode.classList.contains("product")
+//   ) {
+//     product.style.display = "block";
+//     foundIndex = e.target.getAttribute("data-index");
+//     console.log(foundIndex);
+//   }
+// });
 
+// // selectors
+// const productPage = document.querySelector(".product-page");
+// const border = document.querySelector(".border");
+// const productAbout = document.querySelector(".product-about");
+
+// const buildProductPage = () => {
+//   // clear everything in the element before we rebuild:
+//   productAbout.innerHTML = "";
+
+//   // loop through productsContainer, rebuild HTML:
+//   catalog.forEach((item) => {
+//     // create elements
+//     const newImg = document.createElement("img");
+//     const newH2 = document.createElement("h2");
+//     const description = document.createElement("p");
+//     const price = document.createElement("p");
+
+//     // Attribute
+//     newImg.setAttribute("src", item.img);
+//     newImg.setAttribute("alt", item.alt);
+
+//     // modify elements
+//     // style
+//     newImg.classList.add("larger-image");
+//     newH2.classList.add("product-name");
+//     description.classList.add("product-description");
+//     price.classList.add("product-price");
+
+//     // values (text content)
+//     newH2.textContent = `${item.brand} ${item.model}`;
+//     description.textContent = item.description;
+//     price.textContent = item.cost;
+
+//     // add elements to HTML
+//     border.append(newImg);
+//     productAbout.append(newH2, description, price);
+//   });
+// };
+// buildProductPage();
+
+// // selectors
+// const productHeader = document.querySelector(".product-header");
+
+// productHeader.addEventListener("click", (e) => {
+//   console.dir(e.target);
+//   if (e.target.classList.contains("product-page-back-arrow")) {
+//     product.style.display = "none";
+//   }
+// });
+
+const itemsInCart = [];
 // selectors
-const productPage = document.querySelector(".product-page");
-const border = document.querySelector(".border");
-const productAbout = document.querySelector(".product-about");
-
-const buildProductPage = () => {
-  // clear everything in the element before we rebuild:
-  productAbout.innerHTML = "";
-
-  // loop through productsContainer, rebuild HTML:
-  catalog.forEach((item) => {
-    // create elements
-    const newImg = document.createElement("img");
-    const newH2 = document.createElement("h2");
-    const description = document.createElement("p");
-    const price = document.createElement("p");
-
-    // Attribute
-    newImg.setAttribute("src", item.img);
-    newImg.setAttribute("alt", item.alt);
-
-    // modify elements
-    // style
-    newImg.classList.add("larger-image");
-    newH2.classList.add("product-name");
-    description.classList.add("product-description");
-    price.classList.add("product-price");
-
-    // values (text content)
-    newH2.textContent = `${item.brand} ${item.model}`;
-    description.textContent = item.description;
-    price.textContent = item.cost;
-
-    // add elements to HTML
-    border.append(newImg);
-    productAbout.append(newH2, description, price);
-  });
-};
-buildProductPage();

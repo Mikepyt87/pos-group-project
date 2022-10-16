@@ -1,0 +1,39 @@
+body {
+  background-color: #e2e2e2;
+  font-family: "Montserrat", sans-serif;
+}
+
+section {
+  margin: 20px 0;
+  border: 1px solid black;
+}
+
+#productCatalog {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product {
+  margin: 10px;
+}
+
+.product,
+.productCheckout {
+  border: 5px dashed black;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#cartBackArrow {
+  width: 100px;
+}
+
+#shippingInfo {
+  display: none;
+}
+
+#checkout {
+  display: none;
+}
