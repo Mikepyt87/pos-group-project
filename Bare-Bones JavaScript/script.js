@@ -344,6 +344,7 @@ shippingAndBillingInfo.addEventListener("submit", (e) => {
   const inputState = document.querySelector("#state").value;
   const inputCity = document.querySelector("#city").value;
   const inputZip = document.querySelector("#zip_code").value;
+
   console.log(
     inputEmail,
     inputFirstName,
@@ -354,7 +355,13 @@ shippingAndBillingInfo.addEventListener("submit", (e) => {
     inputCity,
     inputZip
   );
+
   deliveryAddress.textContent = `${inputFirstName} ${inputLastName}, ${inputAddressLine1}, ${inputState} ${inputZip}`;
+
+  const cash = document.querySelector("#cash").value;
+  const credit = document.querySelector("#credit").value;
+  console.log(cash);
+  console.log(credit);
 });
 
 const makeConfirmationNumber = () => {
