@@ -113,18 +113,51 @@ section {
 }
 
 /* style for checkout */
-.productCheckout {
-  border: 1px dashed black;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.productImageCheckout {
-  width: 110px;
-}
-
 #cartBackArrow {
   width: 100px;
 }
+.productCheckout {
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  height: 125px;
+}
+
+.productImageCheckout {
+  width: 100px;
+  margin: 0 5px 0 12px;
+}
+
+.brandAndModelCheckout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 165px;
+}
+
+.productModelCheckout {
+  font-size: 12px;
+}
+
+.name-description-price {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70px;
+  font-weight: bold;
+}
+
+.productDescriptionCheckout {
+  font-size: 12px;
+  margin: 0 55px 0 0;
+}
+
+.totalCost {
+  margin: 25px 0 10px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90px;
+}
+
 /* style for checkout */

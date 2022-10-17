@@ -202,31 +202,43 @@ const catalogAndCartToHTML = () => {
   fakeCartArray.forEach((item) => {
     // create elements
     const productCheckout = document.createElement("div");
-    const productNameCheckout = document.createElement("p");
-    const productPriceCheckout = document.createElement("p");
     const productImageCheckout = document.createElement("img");
+    const nameDescriptionPrice = document.createElement("div");
+    const brandAndModelCheckout = document.createElement("div");
+    const productBrandCheckout = document.createElement("p");
+    const productModelCheckout = document.createElement("p");
+    const productDescriptionCheckout = document.createElement("p");
+    const productPriceCheckout = document.createElement("p");
 
     // modify elements
     // style:
     productCheckout.classList.add("productCheckout");
-    productNameCheckout.classList.add("productNameCheckout");
-    productPriceCheckout.classList.add("productPriceCheckout");
     productImageCheckout.classList.add("productImageCheckout");
+    nameDescriptionPrice.classList.add("name-description-price");
+    brandAndModelCheckout.classList.add("brandAndModelCheckout");
+    productBrandCheckout.classList.add("productBrandCheckout");
+    productModelCheckout.classList.add("productModelCheckout");
+    productDescriptionCheckout.classList.add("productDescriptionCheckout");
+    productPriceCheckout.classList.add("productPriceCheckout");
 
     // Attribute:
     productImageCheckout.setAttribute("src", item.img);
     productImageCheckout.setAttribute("alt", item.alt);
 
     // values (text-content)
-    productNameCheckout.textContent = item.name;
+    productBrandCheckout.textContent = item.brand;
+    productModelCheckout.textContent = item.model;
+    productDescriptionCheckout.textContent = item.description;
     productPriceCheckout.textContent = `$${item.price}`;
 
     // add (append) elements to HTML:
-    productCheckout.append(
-      productImageCheckout,
-      productNameCheckout,
+    brandAndModelCheckout.append(productBrandCheckout, productModelCheckout);
+    nameDescriptionPrice.append(
+      brandAndModelCheckout,
+      productDescriptionCheckout,
       productPriceCheckout
     );
+    productCheckout.append(productImageCheckout, nameDescriptionPrice);
     productsInCart.append(productCheckout);
   });
 };
