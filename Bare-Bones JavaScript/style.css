@@ -21,12 +21,12 @@ body {
   );
   font-family: "Montserrat", sans-serif;
 }
-
+/* 
 #shippingInfo,
 #checkout,
 #orderConfirmation {
   display: none;
-}
+} */
 
 section {
   margin: 20px 0;
@@ -105,10 +105,10 @@ section {
   );
   width: 100vw;
   height: 106vh;
-  position: absolute;
+  /* position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
 
 /* style for checkout */
@@ -160,3 +160,10 @@ section {
 }
 
 /* style for checkout */
+
+.tenderedContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 10px;
+}

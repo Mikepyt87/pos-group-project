@@ -154,15 +154,22 @@
             id="zip_code"
             placeholder="Zip code"
           />
+          <div>
+            <input type="radio" id="cash" name="paymentOption" value="cash"
+                   checked>
+            <label for="cash">Cash</label>
+          </div>
+      
+          <div>
+            <input type="radio" id="card" name="paymentOption" value="card">
+            <label for="card">Card</label>
+          </div>
+          <button>Continue</button>
         </section>
-        <label for="save_billing_address"></label>
-        <input
-          type="checkbox"
-          name="save_billing_address"
-          id="save_billing_address"
-          class="save_billing_info"
-        />
-        <section>
+        
+        
+      </form>
+        <form>
           <p>Billing Information</p>
           <label for="e-mail"></label>
           <input type="email" name="e-mail" id="e-mail" placeholder="E-Mail" />
@@ -260,8 +267,23 @@
             id="zip_code"
             placeholder="Zip code"
           />
-        </section>
-        <section class=""</section>
+          
+        </form>
+        
+      
+        <form class="cashOption">
+          <label for="cashOption">Cash</label>
+          <div class="tenderedContainer">
+                    <p class="cashTotal">total</p>
+          <input type="text"
+          name="cashOption"
+          id="cashOption"
+          placeholder="0.00"
+          >
+          <button class="submit">Submit</button>
+          <p class="changeDue"></p>
+        </div>
+        </form>
         <section id="creditCardOption">
           <label for="card_number"></label>
           <input
@@ -345,8 +367,8 @@
           name="save_payment_info"
           id="save_payment_info"
         />
-        <button>Continue</button>
-      </form>
+        
+      
     </section>
     <section id="orderConfirmation">
       <p>Your confirmation number is</p>

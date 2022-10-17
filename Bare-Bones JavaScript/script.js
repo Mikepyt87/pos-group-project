@@ -146,6 +146,9 @@ const datePlaced = document.querySelector("#datePlaced"); // text to display in 
 const poAccount = document.querySelector("#poAccount"); // text to display in HTML
 const confirmationTotal = document.querySelector("#confirmationTotal"); // text to display in HTML
 const deliveryAddress = document.querySelector("#deliveryAddress");
+const cashTotal = document.querySelector(".cashTotal");
+const changeDue = document.querySelector(".changeDue");
+const cashOption = document.querySelector(".cashOption");
 
 // display product arrays on page-----------------------------------------------------------
 const catalogAndCartToHTML = () => {
@@ -258,17 +261,34 @@ const subtotal = () => {
   const total = priceSum + tax;
   const totalResult = total.toFixed(2); // toFixed() rounds number to # of decimal places
 
-  // adding values to HTML text
+  // adding .cart values to HTML text
   subtotalText.textContent = `Subtotal: $${subtotal}`;
   taxText.textContent = `Tax: $${taxResult}`;
   totalText.textContent = `Total: $${totalResult}`;
   confirmationTotal.textContent = `$${totalResult}`; // editing text inside of order confirmation
+  // cash
+  cashTotal.textContent = `$${totalResult}`;
+  cashOption.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const tenderedContainer = document.querySelector("#cashOption").value;
+    console.log(tenderedContainer);
+    const cashReturned = tenderedContainer - totalResult;
+    if (cashReturned < 0) {
+      changeDue.textContent = "You owe us more money!";
+    } else if (cashReturned === 0) {
+      changeDue.textContent = "Perfect amount! Thank you!";
+    } else {
+      changeDue.textContent = `Return $${
+        tenderedContainer - totalResult
+      } to patron`;
+    }
+  });
 
   // If the user is paying in cash, ask for the amount tendered and provide change.
   // user cash input - total = Amount owed
-  const userInput = 10000;
-  const amountOwed = userInput - totalResult;
-  console.log(`$${amountOwed} owed`);
+  // const userInput = 10000;
+  // const amountOwed = userInput - totalResult;
+  // console.log(`$${amountOwed} owed`);
 };
 subtotal();
 
