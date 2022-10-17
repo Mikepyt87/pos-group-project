@@ -21,12 +21,13 @@ body {
   );
   font-family: "Montserrat", sans-serif;
 }
-/* 
-#shippingInfo,
+.cashOption,
+.creditCardOption,
+.billingInformation,
 #checkout,
 #orderConfirmation {
   display: none;
-} */
+}
 
 section {
   margin: 20px 0;

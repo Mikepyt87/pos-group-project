@@ -92,6 +92,7 @@
           <input type="text" name="city" id="city" placeholder="City" />
           <label for="state"></label>
           <select name="state" id="state">
+            <option value=""></option>
             <option value="al">AL</option>
             <option value="ak">AK</option>
             <option value="az">AZ</option>
@@ -162,14 +163,27 @@
       
           <div>
             <input type="radio" id="credit" name="paymentOption" value="card" checked>  
-            <label for="card">Card</label>
+            <label for="card">Credit</label>
           </div>
           <button>Continue</button>
         </section>
         
         
       </form>
-        <form>
+      <form class="cashOption">
+        <label for="cashOption">Cash</label>
+        <div class="tenderedContainer">
+                  <p class="cashTotal">total</p>
+        <input type="text"
+        name="cashOption"
+        id="cashOption"
+        placeholder="0.00"
+        >
+        <button class="submit">Submit</button>
+        <p class="changeDue"></p>
+      </div>
+      </form>
+        <form class="billingInformation">
           <p>Billing Information</p>
           <label for="e-mail"></label>
           <input type="email" name="e-mail" id="e-mail" placeholder="E-Mail" />
@@ -267,110 +281,96 @@
             id="zip_code"
             placeholder="Zip code"
           />
-          
+          <section class="creditCardOption" id="creditCardOption">
+            <label for="card_number"></label>
+            <input
+              type="text"
+              name="card_number"
+              id="card_number"
+              placeholder="Card number"
+            />
+            <label for="state"></label>
+            <select name="state" id="state">
+              <option value="al">AL</option>
+              <option value="ak">AK</option>
+              <option value="az">AZ</option>
+              <option value="ar">AR</option>
+              <option value="ca">CA</option>
+              <option value="co">CO</option>
+              <option value="ct">CT</option>
+              <option value="de">DE</option>
+              <option value="dc">DC</option>
+              <option value="fl">FL</option>
+              <option value="ga">GA</option>
+              <option value="gu">GU</option>
+              <option value="hi">HI</option>
+              <option value="id">ID</option>
+              <option value="il">IL</option>
+              <option value="in">IN</option>
+              <option value="ia">IA</option>
+              <option value="ks">KS</option>
+              <option value="ky">KY</option>
+              <option value="la">LA</option>
+              <option value="me">ME</option>
+              <option value="md">MD</option>
+              <option value="ma">MA</option>
+              <option value="mi">MI</option>
+              <option value="mn">MN</option>
+              <option value="ms">MS</option>
+              <option value="mo">MO</option>
+              <option value="mt">MT</option>
+              <option value="ne">NE</option>
+              <option value="nv">NV</option>
+              <option value="nh">NH</option>
+              <option value="nj">NJ</option>
+              <option value="nm">NM</option>
+              <option value="ny">NY</option>
+              <option value="nc">NC</option>
+              <option value="nd">ND</option>
+              <option value="oh">OH</option>
+              <option value="ok">OK</option>
+              <option value="or">OR</option>
+              <option value="pa">PA</option>
+              <option value="pr">PR</option>
+              <option value="ri">RI</option>
+              <option value="sc">SC</option>
+              <option value="sd">SD</option>
+              <option value="tn">TN</option>
+              <option value="tx">TX</option>
+              <option value="ut">UT</option>
+              <option value="vt">VT</option>
+              <option value="vi">VI</option>
+              <option value="va">VA</option>
+              <option value="wa">WA</option>
+              <option value="wv">WV</option>
+              <option value="wi">WI</option>
+              <option value="wy">WY</option>
+            </select>
+            <label for="month"></label>
+            <input type="month" name="month" id="month" />
+            <label for="text"></label>
+            <input
+              type="full_name"
+              name="full_name"
+              id="full_name"
+              placeholder="Name on card"
+            />
+            <label for="text"></label>
+            <input type="cvv" name="cvv" id="cvv" placeholder="CVV" />
+          </section>
+          <label for="save_payment_info"></label>
+          <input
+            type="checkbox"
+            name="save_payment_info"
+            id="save_payment_info"
+          />                 
+      </section>
         </form>
         
       
-        <form class="cashOption">
-          <label for="cashOption">Cash</label>
-          <div class="tenderedContainer">
-                    <p class="cashTotal">total</p>
-          <input type="text"
-          name="cashOption"
-          id="cashOption"
-          placeholder="0.00"
-          >
-          <button class="submit">Submit</button>
-          <p class="changeDue"></p>
-        </div>
-        </form>
-        <section id="creditCardOption">
-          <label for="card_number"></label>
-          <input
-            type="text"
-            name="card_number"
-            id="card_number"
-            placeholder="Card number"
-          />
-          <label for="state"></label>
-          <select name="state" id="state">
-            <option value="al">AL</option>
-            <option value="ak">AK</option>
-            <option value="az">AZ</option>
-            <option value="ar">AR</option>
-            <option value="ca">CA</option>
-            <option value="co">CO</option>
-            <option value="ct">CT</option>
-            <option value="de">DE</option>
-            <option value="dc">DC</option>
-            <option value="fl">FL</option>
-            <option value="ga">GA</option>
-            <option value="gu">GU</option>
-            <option value="hi">HI</option>
-            <option value="id">ID</option>
-            <option value="il">IL</option>
-            <option value="in">IN</option>
-            <option value="ia">IA</option>
-            <option value="ks">KS</option>
-            <option value="ky">KY</option>
-            <option value="la">LA</option>
-            <option value="me">ME</option>
-            <option value="md">MD</option>
-            <option value="ma">MA</option>
-            <option value="mi">MI</option>
-            <option value="mn">MN</option>
-            <option value="ms">MS</option>
-            <option value="mo">MO</option>
-            <option value="mt">MT</option>
-            <option value="ne">NE</option>
-            <option value="nv">NV</option>
-            <option value="nh">NH</option>
-            <option value="nj">NJ</option>
-            <option value="nm">NM</option>
-            <option value="ny">NY</option>
-            <option value="nc">NC</option>
-            <option value="nd">ND</option>
-            <option value="oh">OH</option>
-            <option value="ok">OK</option>
-            <option value="or">OR</option>
-            <option value="pa">PA</option>
-            <option value="pr">PR</option>
-            <option value="ri">RI</option>
-            <option value="sc">SC</option>
-            <option value="sd">SD</option>
-            <option value="tn">TN</option>
-            <option value="tx">TX</option>
-            <option value="ut">UT</option>
-            <option value="vt">VT</option>
-            <option value="vi">VI</option>
-            <option value="va">VA</option>
-            <option value="wa">WA</option>
-            <option value="wv">WV</option>
-            <option value="wi">WI</option>
-            <option value="wy">WY</option>
-          </select>
-          <label for="month"></label>
-          <input type="month" name="month" id="month" />
-          <label for="text"></label>
-          <input
-            type="full_name"
-            name="full_name"
-            id="full_name"
-            placeholder="Name on card"
-          />
-          <label for="text"></label>
-          <input type="cvv" name="cvv" id="cvv" placeholder="CVV" />
-        </section>
-        <label for="save_payment_info"></label>
-        <input
-          type="checkbox"
-          name="save_payment_info"
-          id="save_payment_info"
-        />
         
-      
-    </section>
-    <section id="orderConfirmation">
+        
+    <section class="orderConfirmation" id="orderConfirmation">
       <p>Your confirmation number is</p>
       <p id="confirmationNumber">12345678</p>
       <p>Date Placed</p>

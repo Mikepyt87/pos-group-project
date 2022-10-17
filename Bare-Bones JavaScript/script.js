@@ -129,7 +129,7 @@ const totalText = document.querySelector("#total");
 // selecting different containers
 const body = document.querySelector("body"); // selector for all content (might use for fewer eventListeners)
 const checkout = document.querySelector("#checkout"); // selector to display none or block
-const shippingInfo = document.querySelector("#shippingInfo"); // selector to display none or block
+const shippingInfo = document.querySelector(".shippingAndBillingInfo"); // selector to display none or block
 
 // const product = document.querySelector("#product"); // might be extra
 const productCatalog = document.querySelector("#productCatalog"); // selected to remove inner HTML and append new elements to.
@@ -149,6 +149,9 @@ const deliveryAddress = document.querySelector("#deliveryAddress");
 const cashTotal = document.querySelector(".cashTotal");
 const changeDue = document.querySelector(".changeDue");
 const cashOption = document.querySelector(".cashOption");
+const billingAndCartInfo = document.querySelector(".billingInformation");
+const credtCardOption = document.querySelector(".credtCardOption");
+const orderConfirmation = document.querySelector(".orderConfirmation");
 
 // display product arrays on page-----------------------------------------------------------
 const catalogAndCartToHTML = () => {
@@ -268,6 +271,7 @@ const subtotal = () => {
   confirmationTotal.textContent = `$${totalResult}`; // editing text inside of order confirmation
   // cash
   cashTotal.textContent = `$${totalResult}`;
+
   cashOption.addEventListener("submit", (e) => {
     e.preventDefault();
     const tenderedContainer = document.querySelector("#cashOption").value;
@@ -277,7 +281,8 @@ const subtotal = () => {
     if (cashReturned < 0) {
       changeDue.textContent = "You owe us more money!";
     } else if (cashReturned === 0) {
-      changeDue.textContent = "Perfect amount! Thank you!";
+      cashOption.style.display = "none";
+      orderConfirmation.style.display = "block";
     } else {
       changeDue.textContent = `Return $${roundedCashReturned} to patron`;
     }
@@ -358,9 +363,18 @@ shippingAndBillingInfo.addEventListener("submit", (e) => {
 
   deliveryAddress.textContent = `${inputFirstName} ${inputLastName}, ${inputAddressLine1}, ${inputState} ${inputZip}`;
 
-  const cash = document.querySelector("#cash").value;
-  const credit = document.querySelector("#credit").value;
-  console.log(cash);
+  const credit = document.querySelector("#credit").checked;
+  if (credit) {
+    creditCardOption.style.display = "block";
+    billingAndCartInfo.style.display = "block";
+    shippingAndBillingInfo.style.display = "none";
+    console.log("hi");
+  } else {
+    cashOption.style.display = "block";
+    shippingAndBillingInfo.style.display = "none";
+    console.log("bye");
+  }
+
   console.log(credit);
 });
 
