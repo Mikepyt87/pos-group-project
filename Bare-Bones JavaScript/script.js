@@ -275,18 +275,34 @@ const subtotal = () => {
   cashOption.addEventListener("submit", (e) => {
     e.preventDefault();
     const tenderedContainer = document.querySelector("#cashOption").value;
-    console.log(tenderedContainer);
-    const cashReturned = tenderedContainer - totalResult;
+    // console.log(tenderedContainer);
+    const cashReturned = tenderedContainer - total;
     const roundedCashReturned = cashReturned.toFixed(2);
-    if (cashReturned < 0) {
+    const roundedParsedCashReturned = parseFloat(roundedCashReturned);
+
+    // console.log(roundedParsedCashReturned);
+
+    if (roundedParsedCashReturned < 0) {
       changeDue.textContent = "You owe us more money!";
-    } else if (cashReturned === 0) {
+      console.log("You owe us more money!");
+    } else if (roundedCashReturned > 0) {
+      changeDue.textContent = "we owe you!";
+      changeDue.textContent = `Return $${roundedCashReturned} to patron`;
+    } else {
+      changeDue.textContent = "perfect!";
       cashOption.style.display = "none";
       orderConfirmation.style.display = "block";
-    } else {
-      changeDue.textContent = `Return $${roundedCashReturned} to patron`;
     }
   });
+
+  // if (cashReturned < 0) {
+  //   changeDue.textContent = "You owe us more money!";
+  // } else if (cashReturned === 0) {
+  //   cashOption.style.display = "none";
+  //   orderConfirmation.style.display = "block";
+  // } else {
+  //   changeDue.textContent = `Return $${roundedCashReturned} to patron`;
+  // }
 
   // If the user is paying in cash, ask for the amount tendered and provide change.
   // user cash input - total = Amount owed
@@ -294,7 +310,7 @@ const subtotal = () => {
   // const amountOwed = userInput - totalResult;
   // console.log(`$${amountOwed} owed`);
 };
-subtotal();
+// subtotal();
 
 // something
 
@@ -305,7 +321,7 @@ body.addEventListener("click", (e) => {
 
   // add to cart button
   if (e.target.classList.contains("addToCart")) {
-    console.dir(e.target);
+    // console.dir(e.target);
     // popup.style.display = "block";
     foundIndex = e.target.getAttribute("data-index");
     // console.log(foundIndex);
@@ -330,7 +346,7 @@ body.addEventListener("click", (e) => {
 
   // checkout button
   if (e.target.classList.contains("checkoutButton")) {
-    console.dir(e.target);
+    // console.dir(e.target);
     checkout.style.display = "none";
     shippingInfo.style.display = "block";
   }
@@ -350,16 +366,16 @@ shippingAndBillingInfo.addEventListener("submit", (e) => {
   const inputCity = document.querySelector("#city").value;
   const inputZip = document.querySelector("#zip_code").value;
 
-  console.log(
-    inputEmail,
-    inputFirstName,
-    inputLastName,
-    inputAddressLine1,
-    inputAddressLine2,
-    inputState,
-    inputCity,
-    inputZip
-  );
+  // console.log(
+  //   inputEmail,
+  //   inputFirstName,
+  //   inputLastName,
+  //   inputAddressLine1,
+  //   inputAddressLine2,
+  //   inputState,
+  //   inputCity,
+  //   inputZip
+  // );
 
   deliveryAddress.textContent = `${inputFirstName} ${inputLastName}, ${inputAddressLine1}, ${inputState} ${inputZip}`;
 
@@ -368,14 +384,14 @@ shippingAndBillingInfo.addEventListener("submit", (e) => {
     creditCardOption.style.display = "block";
     billingAndCartInfo.style.display = "block";
     shippingAndBillingInfo.style.display = "none";
-    console.log("hi");
+    // console.log("hi");
   } else {
     cashOption.style.display = "block";
     shippingAndBillingInfo.style.display = "none";
-    console.log("bye");
+    // console.log("bye");
   }
 
-  console.log(credit);
+  // console.log(credit);
 });
 
 const makeConfirmationNumber = () => {
@@ -408,4 +424,4 @@ makeConfirmationNumber();
 
 // always repeat at end to update-------------------------------------------------
 catalogAndCartToHTML();
-subtotal();
+// subtotal();
