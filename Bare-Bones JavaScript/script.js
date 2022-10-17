@@ -273,14 +273,13 @@ const subtotal = () => {
     const tenderedContainer = document.querySelector("#cashOption").value;
     console.log(tenderedContainer);
     const cashReturned = tenderedContainer - totalResult;
+    const roundedCashReturned = cashReturned.toFixed(2);
     if (cashReturned < 0) {
       changeDue.textContent = "You owe us more money!";
     } else if (cashReturned === 0) {
       changeDue.textContent = "Perfect amount! Thank you!";
     } else {
-      changeDue.textContent = `Return $${
-        tenderedContainer - totalResult
-      } to patron`;
+      changeDue.textContent = `Return $${roundedCashReturned} to patron`;
     }
   });
 
