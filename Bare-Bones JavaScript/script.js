@@ -263,6 +263,12 @@ const subtotal = () => {
   taxText.textContent = `Tax: $${taxResult}`;
   totalText.textContent = `Total: $${totalResult}`;
   confirmationTotal.textContent = `$${totalResult}`; // editing text inside of order confirmation
+
+  // If the user is paying in cash, ask for the amount tendered and provide change.
+  // user cash input - total = Amount owed
+  const userInput = 10000;
+  const amountOwed = userInput - totalResult;
+  console.log(`$${amountOwed} owed`);
 };
 subtotal();
 
