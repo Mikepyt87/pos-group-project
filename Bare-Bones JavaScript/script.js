@@ -20,104 +20,182 @@
 const catalog = [
   {
     category: "Laptop",
-    name: "Apple Macbook",
-    price: 1200.0,
-    img: "assets/laptopMacbook.svg",
-    alt: "Apple Macbook laptop",
-    description: "It's shing so you know it's good...",
-  },
-  {
-    category: "Laptop",
-    name: "Razr Stealth Blade",
-    price: 2499.0,
-    img: "assets/razerLaptop 1.svg",
-    alt: "Razr Stealth Blade laptop",
-    description: "It's got a light up keyboard need I say more...",
-  },
-  {
-    category: "Laptop",
-    name: "Razr Gametop",
-    price: 450.0,
-    img: "assets/gamertop.svg",
-    alt: "Razr Gametop laptop",
-    description: "Only computer gamers should use. Besides the previous 2.",
-  },
-  {
-    category: "Headphones",
-    name: "Astro A40",
-    price: 175.0,
-    img: "assets/headphonesAstroA40.svg",
-    alt: "Astro A40 headphones",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam ducimus amet ipsum totam fugiat dolore ex nulla impedit. Vitae pariatur architecto nobis? Repellendus voluptate est doloribus veniam quaerat eaque!",
-  },
-  {
-    category: "Headphones",
-    name: "Astro A30",
-    price: 125.0,
-    img: "assets/headphonesAstroA30.svg",
-    alt: "Astro A30 laptop",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam ducimus amet ipsum totam fugiat dolore ex nulla impedit. Vitae pariatur architecto nobis? Repellendus voluptate est doloribus veniam quaerat eaque!",
-  },
-  {
-    category: "Headphones",
-    name: "Logitech Zero",
-    price: 89.99,
-    img: "assets/heaphonesLogitechZero.svg",
-    alt: "Logitech Zero headphones",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam ducimus amet ipsum totam fugiat dolore ex nulla impedit. Vitae pariatur architecto nobis? Repellendus voluptate est doloribus veniam quaerat eaque!",
-  },
-  {
-    category: "Headphones",
-    name: "Logitech Headset",
+    brand: "ASUS",
+    model: "BR1100CKA-YS02",
     price: 99.99,
-    img: "assets/headphonesLogitechHeadset.svg",
-    alt: "Logitech Headset",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam ducimus amet ipsum totam fugiat dolore ex nulla impedit. Vitae pariatur architecto nobis? Repellendus voluptate est doloribus veniam quaerat eaque!",
+    img: "assets/ASUS.png",
+    alt: "ASUS laptop",
+    description: "Built to military-grade standards...",
+  },
+  {
+    category: "Laptop",
+    brand: "Apple",
+    model: "MacBook Pro 2021",
+    price: 4299.99,
+    img: "assets/Macbook.png",
+    alt: "Apple MacBook Pro",
+    description: "The first notebook of its kind...",
+  },
+  {
+    category: "Laptop",
+    brand: "ASUS",
+    model: "Vivobook M1603QA",
+    price: 699.99,
+    img: "assets/ASUSVIVO.png",
+    alt: "Asus Vivobook laptop",
+    description: "Makes it easy to get things done...",
   },
   {
     category: "Headphones",
-    name: "Sony Gamer",
-    price: 75.0,
-    img: "assets/gamerset.svg",
-    alt: "Sony Gamer headphones",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam ducimus amet ipsum totam fugiat dolore ex nulla impedit. Vitae pariatur architecto nobis? Repellendus voluptate est doloribus veniam quaerat eaque!",
+    brand: "Logitech",
+    model: "G733 LIGHTSPEED",
+    price: 175.0,
+    img: "assets/logitech.png",
+    alt: "Astro A40 headphones",
+    description: "Designed to suit your style...",
   },
   {
-    category: "Graphics Cards",
-    name: "NVidia RTX4090",
+    category: "Headphones",
+    brand: "Apple",
+    model: "AirPods Max",
+    price: 499.99,
+    img: "assets/airpodsMax.png",
+    alt: "Apple AirPods Max Headphones",
+    description: "Dynamic driver provides high-fidelity audio...",
+  },
+  {
+    category: "Headphones",
+    brand: "HyperX",
+    model: "Cloud Core Wired",
+    price: 34.99,
+    img: "assets/hyper.png",
+    alt: "HyperX Cloud Core Wired Headphones",
+    description: "Known for its legendary sound...",
+  },
+  {
+    category: "Motherboard",
+    brand: "GIGABYTE",
+    model: "Z690 AORUS ELITE",
+    price: 199.99,
+    img: "assets/motherboard.png",
+    alt: "Gigabyte Z690 Aorus Elite Motherboard",
+    description: "The King of Gaming is here...",
+  },
+  {
+    category: "Graphics Card",
+    brand: "NVIDIA",
+    model: "GeForce RTX 4090",
+    price: 1599.99,
+    img: "assets/gpu.png",
+    alt: "NVIDIA GeForce RTX 4090 Graphics Card",
+    description: "An enormous leap in performance...",
+  },
+  {
+    category: "CPU",
+    brand: "Intel",
+    model: "Core i9-12900K",
     price: 1599.0,
-    img: "assets/gpuRTX4090.svg",
-    alt: "NVidia RTX4090 graphics card",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam ducimus amet ipsum totam fugiat dolore ex nulla impedit. Vitae pariatur architecto nobis? Repellendus voluptate est doloribus veniam quaerat eaque!",
+    img: "assets/cpu.png",
+    alt: "Intel Core i9-12900K Central processing unit",
+    description: "Compatible with the latest platform innovation...",
   },
 
   {
-    category: "Tablet",
-    name: "Generic Roblox",
-    price: 75.0,
-    img: "assets/tabletRoblox.svg",
-    alt: "Generic Roblox tablet",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum laboriosam ducimus amet ipsum totam fugiat dolore ex nulla impedit. Vitae pariatur architecto nobis? Repellendus voluptate est doloribus veniam quaerat eaque!",
+    category: "RAM",
+    brand: "CORSAIR",
+    model: "Vengeance RGB Pro",
+    price: 507.99,
+    img: "assets/ram.png",
+    alt: "Corsair RAM",
+    description: "Dynamic Multi-Zone RGB Lighting...",
   },
 ];
 
 const fakeCartArray = [];
 
-// Cart page----------------------------------------------------------------------
+// const userLocationInfo = [];
 
-// add cart array to page
-// selectors
+const userCreditCardInfo = [];
+
+// selectors--------------------------------------------------------------------------------
+// container that holds products in cart
 const productsInCart = document.querySelector("#productsInCart");
 
-const cartToHTML = () => {
+// text within cart to add up all prices of products selected and display in HTML
+const subtotalText = document.querySelector("#subtotal");
+const taxText = document.querySelector("#tax");
+const totalText = document.querySelector("#total");
+
+// selecting different containers
+const body = document.querySelector("body"); // selector for all content (might use for fewer eventListeners)
+const checkout = document.querySelector("#checkout"); // selector to display none or block
+const shippingInfo = document.querySelector("#shippingInfo"); // selector to display none or block
+
+// const product = document.querySelector("#product"); // might be extra
+const productCatalog = document.querySelector("#productCatalog"); // selected to remove inner HTML and append new elements to.
+const storeHome = document.querySelector("#storeHome"); // added eventlistener to
+
+const shippingAndBillingInfo = document.querySelector(
+  ".shippingAndBillingInfo"
+); // added eventlistener to
+
+const saveBillingAddress = document.querySelector("#save_billing_address");
+
+const confirmationNumber = document.querySelector("#confirmationNumber"); // text to display in HTML
+const datePlaced = document.querySelector("#datePlaced"); // text to display in HTML
+const poAccount = document.querySelector("#poAccount"); // text to display in HTML
+const confirmationTotal = document.querySelector("#confirmationTotal"); // text to display in HTML
+const deliveryAddress = document.querySelector("#deliveryAddress");
+
+// display product arrays on page-----------------------------------------------------------
+const catalogAndCartToHTML = () => {
   // clear everything in the element before we rebuild:
+  productCatalog.innerHTML = "";
+
+  // loop through fakeCartArray, rebuild HTML:
+  catalog.forEach((item, index) => {
+    // create elements
+    const product = document.createElement("div");
+    const productImage = document.createElement("img");
+    const nameAndPrice = document.createElement("div");
+    const brandAndModel = document.createElement("div");
+    const productBrand = document.createElement("p");
+    const productModel = document.createElement("p");
+    const productPrice = document.createElement("p");
+    const productDescription = document.createElement("p");
+    const addToCart = document.createElement("button");
+
+    // modify elements
+    // style:
+    product.classList.add("product");
+    productImage.classList.add("productImage");
+    nameAndPrice.classList.add("nameAndPrice");
+    brandAndModel.classList.add("brandAndModel");
+    productBrand.classList.add("productBrand");
+    productModel.classList.add("productModel");
+    productPrice.classList.add("productPrice");
+    productDescription.classList.add("description");
+    addToCart.classList.add("addToCart");
+
+    // Attribute:
+    // add imgage src & alt here
+    productImage.setAttribute("src", item.img);
+    productImage.setAttribute("alt", item.alt);
+    addToCart.setAttribute("data-index", index);
+
+    // values (text-content)
+    productBrand.textContent = item.brand;
+    productModel.textContent = item.model;
+    productPrice.textContent = `$${item.price}`;
+    productDescription.textContent = item.description;
+    addToCart.textContent = "Add to cart";
+
+    // add (append) elements to HTML:
+    brandAndModel.append(productBrand, productModel);
+    nameAndPrice.append(brandAndModel, productPrice);
+    product.append(productImage, nameAndPrice, productDescription, addToCart);
+    productCatalog.append(product);
+  });
   productsInCart.innerHTML = "";
 
   // loop through fakeCartArray, rebuild HTML:
@@ -152,147 +230,124 @@ const cartToHTML = () => {
     productsInCart.append(productCheckout);
   });
 };
-cartToHTML();
+catalogAndCartToHTML();
 
-// add up prices to generate subtotal, tax, and total
-// array method reduce(); (allows to add up all values in an array)
-
-// selectors
-const subtotalText = document.querySelector("#subtotal");
-const taxText = document.querySelector("#tax");
-const totalText = document.querySelector("#total");
-
+// calculate and display total in cart
 const subtotal = () => {
-  const priceSum = fakeCartArray.reduce(function (acc, obj) {
+  const priceSum = fakeCartArray.reduce((acc, obj) => {
     return acc + obj.price;
   }, 0);
 
+  const subtotal = priceSum.toFixed(2);
+
   const tax = priceSum * 0.06;
-  const taxResult = tax.toFixed(2);
+  const taxResult = tax.toFixed(2); // toFixed() rounds number to # of decimal places
 
   const total = priceSum + tax;
-  const totalResult = total.toFixed(2);
+  const totalResult = total.toFixed(2); // toFixed() rounds number to # of decimal places
 
-  subtotalText.textContent = `Subtotal: $${priceSum}`;
+  // adding values to HTML text
+  subtotalText.textContent = `Subtotal: $${subtotal}`;
   taxText.textContent = `Tax: $${taxResult}`;
   totalText.textContent = `Total: $${totalResult}`;
+  confirmationTotal.textContent = `$${totalResult}`; // editing text inside of order confirmation
 };
 subtotal();
 
-// make checkout button switch to payment information page------------------------
-// selectors
-const body = document.querySelector("body");
-const shippingInfo = document.querySelector("#shippingInfo");
-const checkout = document.querySelector("#checkout");
+// something
+
+let foundIndex = null;
 
 body.addEventListener("click", (e) => {
-  console.dir(e.target);
+  // console.dir(e.target);
+
+  // add to cart button
+  if (e.target.classList.contains("addToCart")) {
+    console.dir(e.target);
+    // popup.style.display = "block";
+    foundIndex = e.target.getAttribute("data-index");
+    // console.log(foundIndex);
+    // console.log("add to cart button was clicked");
+    fakeCartArray.unshift(catalog[foundIndex]);
+    // console.log(fakeCartArray);
+  }
+
+  // open shopping cart button
+  if (e.target.classList.contains("fa-cart-shopping")) {
+    // console.dir(e.target);
+    checkout.style.display = "block";
+    storeHome.style.display = "none";
+  }
+
+  // return to home page from shopping cart button
+  if (e.target.id === "cartBackArrow") {
+    // console.log(e.target.id);
+    checkout.style.display = "none";
+    storeHome.style.display = "block";
+  }
+
+  // checkout button
   if (e.target.classList.contains("checkoutButton")) {
     console.dir(e.target);
     checkout.style.display = "none";
     shippingInfo.style.display = "block";
   }
-
-  // if (e.target.id === "cartBackArrow") {
-  //   // console.log(e.target.id);
-  //   checkout.style.display = "none";
-  // }
-});
-
-// Home store page----------------------------------------------------------------
-
-// add catalog array to home store page
-// selectors
-const product = document.querySelector("#product");
-const productCatalog = document.querySelector("#productCatalog");
-const storeHome = document.querySelector("#storeHome");
-
-const catalogToHTML = () => {
-  // clear everything in the element before we rebuild:
-  productCatalog.innerHTML = "";
-
-  // loop through fakeCartArray, rebuild HTML:
-  catalog.forEach((item, index) => {
-    // create elements
-    const product = document.createElement("div");
-    const productName = document.createElement("p");
-    const productPrice = document.createElement("p");
-    const productImage = document.createElement("img");
-    const productDescription = document.createElement("p");
-    const addToCart = document.createElement("button");
-
-    // modify elements
-    // style:
-    product.classList.add("product");
-    productName.classList.add("productName");
-    productPrice.classList.add("productPrice");
-    productImage.classList.add("productImage");
-    addToCart.classList.add("addToCart");
-
-    // Attribute:
-    // add imgage src & alt here
-    productImage.setAttribute("src", item.img);
-    productImage.setAttribute("alt", item.alt);
-    addToCart.setAttribute("data-index", index);
-
-    // values (text-content)
-    productName.textContent = item.name;
-    productPrice.textContent = `$${item.price}`;
-    productDescription.textContent = item.description;
-    addToCart.textContent = "Add to cart";
-
-    // add (append) elements to HTML:
-    product.append(
-      productImage,
-      productName,
-      productDescription,
-      productPrice,
-      addToCart
-    );
-    productCatalog.append(product);
-  });
-};
-catalogToHTML();
-
-let foundIndex = null;
-
-storeHome.addEventListener("click", (e) => {
-  //   console.dir(e.target.id);
-
-  //   console.log(foundIndex);
-  if (e.target.classList.contains("addToCart")) {
-    // popup.style.display = "block";
-    foundIndex = e.target.getAttribute("data-index");
-    console.log(foundIndex);
-    console.log("add to cart button was clicked");
-    fakeCartArray.unshift(catalog[foundIndex]);
-    console.log(fakeCartArray);
-  }
-  //   catalog.splice(foundIndex, 1); // deletes from catalog. Maybe good for quantity
-  // console.log(catalog);
-  catalogToHTML();
-  cartToHTML();
+  catalogAndCartToHTML();
   subtotal();
 });
 
-// make cart image clickable
+shippingAndBillingInfo.addEventListener("submit", (e) => {
+  e.preventDefault(); // prevents reload
 
-body.addEventListener("click", (e) => {
-  // console.dir(e.target);
-  if (e.target.classList.contains("fa-cart-shopping")) {
-    console.dir(e.target);
-    checkout.style.display = "block";
-  }
-
-  if (e.target.id === "cartBackArrow") {
-    // console.log(e.target.id);
-    checkout.style.display = "none";
-  }
+  const inputEmail = document.querySelector("#e-mail").value;
+  const inputFirstName = document.querySelector("#first_name").value;
+  const inputLastName = document.querySelector("#last_name").value;
+  const inputAddressLine1 = document.querySelector("#address_line1").value;
+  const inputAddressLine2 = document.querySelector("#address_line2").value;
+  const inputState = document.querySelector("#state").value;
+  const inputCity = document.querySelector("#city").value;
+  const inputZip = document.querySelector("#zip_code").value;
+  console.log(
+    inputEmail,
+    inputFirstName,
+    inputLastName,
+    inputAddressLine1,
+    inputAddressLine2,
+    inputState,
+    inputCity,
+    inputZip
+  );
+  deliveryAddress.textContent = `${inputFirstName} ${inputLastName}, ${inputAddressLine1}, ${inputState} ${inputZip}`;
 });
 
-// Payment information page------------------------------------------------------------------------------
+const makeConfirmationNumber = () => {
+  // generate random strings for confirmation# and P.O. Account#
+  let result1 = "";
+  let result2 = "";
+  const characters = "0123456789";
+  const poCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  const charactersLength = characters.length;
+  const poCharactersLength = poCharacters.length;
+  for (let i = 0; i < 8; i++) {
+    result1 += characters.charAt(Math.floor(Math.random() * charactersLength));
+    result2 += poCharacters.charAt(
+      Math.floor(Math.random() * poCharactersLength)
+    );
+  }
+
+  // get todays date for date placed
+  const date = new Date();
+  let month = date.getMonth() + 1;
+  let day = date.getDate();
+  let year = date.getFullYear();
+
+  // values (text-content)
+  confirmationNumber.textContent = result1;
+  datePlaced.textContent = `${month}/${day}/${year}`;
+  poAccount.textContent = result2;
+};
+makeConfirmationNumber();
 
 // always repeat at end to update-------------------------------------------------
-catalogToHTML();
-cartToHTML();
+catalogAndCartToHTML();
 subtotal();

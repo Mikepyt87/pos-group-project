@@ -1,39 +1,130 @@
+/* styling for entire page */
+/* resets */
+html,
+body,
+p,
+div,
+section,
+body,
+main,
+footer,
+i {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: #e2e2e2;
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(164, 164, 164, 1) 100%
+  );
   font-family: "Montserrat", sans-serif;
+}
+
+#shippingInfo,
+#checkout,
+#orderConfirmation {
+  display: none;
 }
 
 section {
   margin: 20px 0;
   border: 1px solid black;
 }
+/* styling for entire page */
 
+/* style for products on home page */
 #productCatalog {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .product {
-  margin: 10px;
-}
-
-.product,
-.productCheckout {
-  border: 5px dashed black;
-  width: 260px;
+  margin: 0px 6px 20px 6px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.productImage {
+  width: 160px;
+}
+
+.brandAndModel {
+  display: flex;
+  flex-direction: column;
+}
+
+.productModel {
+  font-size: 15px;
+}
+
+.productBrand {
+  font-size: 10px;
+}
+
+.nameAndPrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 0 0;
+  width: 170px;
+  font-weight: bold;
+}
+
+.productPrice {
+  font-size: 16px;
+}
+
+.description {
+  width: 174px;
+  font-family: "Courier New", Courier, monospace;
+  color: #6f6f6f;
+  font-size: 14px;
+}
+
+.addToCart {
+  margin: 2px 0 0 0;
+  padding: 10px 30px;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  background-color: #ff4850;
+}
+/* style for products on home page */
+#checkout {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    36deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(164, 164, 164, 1) 100%
+  );
+  width: 100vw;
+  height: 106vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* style for checkout */
+.productCheckout {
+  border: 1px dashed black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.productImageCheckout {
+  width: 110px;
+}
+
 #cartBackArrow {
   width: 100px;
 }
-
-#shippingInfo {
-  display: none;
-}
-
-#checkout {
-  display: none;
-}
+/* style for checkout */

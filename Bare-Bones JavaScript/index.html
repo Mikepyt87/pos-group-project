@@ -19,14 +19,23 @@
       <!-- change the 5x to resize cart icon (4x is smaller, 6x is bigger, etc) -->
       <div id="productCatalog">
         <div class="product">
-            <p class="productName">VivoBook</p>
-            <p class="productPrice">$899.99</p>
-      </div>
+          <img class="productImage" src="assets/ASUS.png" alt="laptop">
+          <div class="nameAndPrice">
+            <div class="brandAndModel">
+            <p class="productBrand">ASUS</p>
+            <p class="productModel">BR1100CKA-YS02</p>
+          </div>
+            <p class="productPrice">$99.99</p>
+          </div>
+            <p class="description">Built to military-grade standards...</p>
+            <button class="addToCart">Add to cart</button>
+            </div>
+
     </section>
     <section id="checkout">
       <img src="assets/back-arrow.svg" alt="back arrow" id="cartBackArrow">
       <div id="productsInCart">
-        <div class="productCheckout">
+        <div class="productCheckout" style="overflow-y:scroll;">
           <p class="productNameCheckout">VivoBook</p>
           <p class="productPriceCheckout">$899.99</p>
         </div>
@@ -35,9 +44,10 @@
       <p id="tax">Tax: $0.00</p>
       <p id="total">Total: $0.00</p>
       <button class="checkoutButton">Check out</button>
-    </section>
+    </section>  
     <section id="shippingInfo">
-      <form>
+      <form class="shippingAndBillingInfo">
+        <p>Shipping information</p>
         <section>
           <label for="e-mail"></label>
           <input type="email" name="e-mail" id="e-mail" placeholder="E-Mail" />
@@ -141,8 +151,10 @@
           type="checkbox"
           name="save_billing_address"
           id="save_billing_address"
+          class="save_billing_info"
         />
         <section>
+          <p>Billing Information</p>
           <label for="e-mail"></label>
           <input type="email" name="e-mail" id="e-mail" placeholder="E-Mail" />
           <label for="first_name"></label>
@@ -328,13 +340,11 @@
     </section>
     <section id="orderConfirmation">
       <p>Your confirmation number is</p>
-      <p>12345678</p>
-      <p>Confirmation #</p>
-      <p>12345678</p>
+      <p id="confirmationNumber">12345678</p>
       <p>Date Placed</p>
-      <p>10/15/2022</p>
+      <p id="datePlaced">00/00/0000</p>
       <p>P.O. # Account</p>
-      <p>DJM12345</p>
+      <p id="poAccount">DJM12345</p>
       <p>order placed by</p>
       <p>Guest</p>
       <p>Shipping Method</p>
@@ -342,7 +352,9 @@
       <p>Payment Information</p>
       <p>MastercardXXXX XXXXXXXX1234</p>
       <p>Total</p>
-      <p>$0.00</p>
+      <p id="confirmationTotal">$0.00</p>
+      <p>Your order is being shipped to:</p>
+      <p id="deliveryAddress">Robert Robertson, 1234 NW Bobcat Lane, St. Robert, MO 65584</p>
     </section>
     <!-- keep JS at the bottom -->
     <script src="https://kit.fontawesome.com/73cad7b292.js" crossorigin="anonymous"></script>
