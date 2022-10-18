@@ -42,6 +42,20 @@ section {
 /* styling for entire page */
 
 /* style for products on home page */
+header {
+  display: flex;
+  align-items: center;
+}
+
+.cartTally {
+  color: white;
+  position: absolute;
+  top: 14px;
+  left: 39px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 #productCatalog {
   display: flex;
   flex-wrap: wrap;

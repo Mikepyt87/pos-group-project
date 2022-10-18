@@ -157,6 +157,7 @@ const amountReturned = document.querySelector(".amountReturned");
 const shoppingCart = document.querySelector(".fa-cart-shopping");
 const paymentOption = document.querySelector(".paymentOption");
 const productsPurchased = document.querySelector(".productsPurchased");
+const cartTally = document.querySelector(".cartTally");
 
 // display product arrays on page-----------------------------------------------------------
 const catalogAndCartToHTML = () => {
@@ -378,7 +379,10 @@ creditOption.addEventListener("submit", (e) => {
 
 header.addEventListener("click", (e) => {
   // open shopping cart button
-  if (e.target.classList.contains("fa-cart-shopping")) {
+  if (
+    e.target.classList.contains("fa-cart-shopping") ||
+    e.target.classList.contains("cartTally")
+  ) {
     // console.dir(e.target);
     checkout.style.display = "block";
     storeHome.style.display = "none";
@@ -400,6 +404,9 @@ body.addEventListener("click", (e) => {
     // console.log("add to cart button was clicked");
     fakeCartArray.unshift(catalog[foundIndex]);
     // console.log(fakeCartArray);
+    cartTally.textContent = fakeCartArray.length;
+    if (fakeCartArray.length >= 10) {
+    }
   }
 
   // return to home page from shopping cart button
