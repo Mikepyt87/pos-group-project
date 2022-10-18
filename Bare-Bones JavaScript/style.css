@@ -21,13 +21,19 @@ body {
   );
   font-family: "Montserrat", sans-serif;
 }
+
 .cashOption,
-.creditCardOption,
-.billingInformation,
+.creditOption,
 .shippingAndBillingInfo,
 #checkout,
 #orderConfirmation {
   display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 section {
@@ -133,7 +139,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 165px;
+  width: 190px;
 }
 
 .productModelCheckout {
@@ -163,6 +169,7 @@ section {
 
 /* style for checkout */
 
+/* style for cash option */
 .tenderedContainer {
   display: flex;
   flex-direction: row;

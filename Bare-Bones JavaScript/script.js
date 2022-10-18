@@ -8,11 +8,13 @@
 // Provide a way for the user to check out and view their cart.✓
 // Give the subtotal, sales tax, and the total.✓
 
-// If the user is paying in cash, ask for the amount tendered and provide change.
+// If the user is paying in cash, ask for the amount tendered and provide change.✓
 
-// If the user is paying with a card, ask for the card number, expiration, and CVV.
+// If the user is paying with a card, ask for the card number, expiration, and CVV.✓
 
 // Provide a receipt for the payment which includes the item(s) bought, the subtotal, total, and anything else of interest.
+
+// add required at the end of all input elements
 
 // A stretch goal is to implement validation for credit card numbers...
 
@@ -49,7 +51,7 @@ const catalog = [
     category: "Headphones",
     brand: "Logitech",
     model: "G733 LIGHTSPEED",
-    price: 175.0,
+    price: 175.99,
     img: "assets/logitech.png",
     alt: "Astro A40 headphones",
     description: "Designed to suit your style...",
@@ -127,6 +129,7 @@ const taxText = document.querySelector("#tax");
 const totalText = document.querySelector("#total");
 
 // selecting different containers
+const header = document.querySelector("header");
 const body = document.querySelector("body"); // selector for all content (might use for fewer eventListeners)
 const checkout = document.querySelector("#checkout"); // selector to display none or block
 const shippingInfo = document.querySelector(".shippingAndBillingInfo"); // selector to display none or block
@@ -135,26 +138,28 @@ const shippingInfo = document.querySelector(".shippingAndBillingInfo"); // selec
 const productCatalog = document.querySelector("#productCatalog"); // selected to remove inner HTML and append new elements to.
 const storeHome = document.querySelector("#storeHome"); // added eventlistener to
 
-const shippingAndBillingInfo = document.querySelector(
-  ".shippingAndBillingInfo"
-); // added eventlistener to
-
 const saveBillingAddress = document.querySelector("#save_billing_address");
 
 const confirmationNumber = document.querySelector("#confirmationNumber"); // text to display in HTML
 const datePlaced = document.querySelector("#datePlaced"); // text to display in HTML
 const poAccount = document.querySelector("#poAccount"); // text to display in HTML
+const confirmationSubtotal = document.querySelector("#confirmationSubtotal");
+const confirmationTax = document.querySelector("#confirmationTax");
 const confirmationTotal = document.querySelector("#confirmationTotal"); // text to display in HTML
 const deliveryAddress = document.querySelector("#deliveryAddress");
 const cashTotal = document.querySelector(".cashTotal");
 const changeDue = document.querySelector(".changeDue");
 const cashOption = document.querySelector(".cashOption");
-const billingAndCartInfo = document.querySelector(".billingInformation");
+const creditOption = document.querySelector(".creditOption");
 const credtCardOption = document.querySelector(".credtCardOption");
 const orderConfirmation = document.querySelector(".orderConfirmation");
+const amountReturned = document.querySelector(".amountReturned");
+const shoppingCart = document.querySelector(".fa-cart-shopping");
+const paymentOption = document.querySelector(".paymentOption");
+const productsPurchased = document.querySelector(".productsPurchased");
 
 // display product arrays on page-----------------------------------------------------------
-const catalogAndCartToHTML = () => {
+const catalogAndCartToAndPurchasedHTML = () => {
   // clear everything in the element before we rebuild:
   productCatalog.innerHTML = "";
 
@@ -247,8 +252,51 @@ const catalogAndCartToHTML = () => {
     productCheckout.append(productImageCheckout, nameDescriptionPrice);
     productsInCart.append(productCheckout);
   });
+
+  fakeCartArray.forEach((item) => {
+    // create elements
+    const productPurchased = document.createElement("div");
+    const productImagePurchased = document.createElement("img");
+    const nameDescriptionPurchased = document.createElement("div");
+    const brandAndModelPurchased = document.createElement("div");
+    const productBrandPurchased = document.createElement("p");
+    const productModelPurchased = document.createElement("p");
+    const productDescriptionPurchased = document.createElement("p");
+    const productPricePurchased = document.createElement("p");
+
+    // modify elements
+    // style:
+    productPurchased.classList.add("productCheckout");
+    productImagePurchased.classList.add("productImageCheckout");
+    nameDescriptionPurchased.classList.add("name-description-price");
+    brandAndModelPurchased.classList.add("brandAndModelCheckout");
+    productBrandPurchased.classList.add("productBrandCheckout");
+    productModelPurchased.classList.add("productModelCheckout");
+    productDescriptionPurchased.classList.add("productDescriptionCheckout");
+    productPricePurchased.classList.add("productPriceCheckout");
+
+    // Attribute:
+    productImagePurchased.setAttribute("src", item.img);
+    productImagePurchased.setAttribute("alt", item.alt);
+
+    // values (text-content)
+    productBrandPurchased.textContent = item.brand;
+    productModelPurchased.textContent = item.model;
+    productDescriptionPurchased.textContent = item.description;
+    productPricePurchased.textContent = `$${item.price}`;
+
+    // add (append) elements to HTML:
+    brandAndModelPurchased.append(productBrandPurchased, productModelPurchased);
+    nameDescriptionPurchased.append(
+      brandAndModelPurchased,
+      productDescriptionPurchased,
+      productPricePurchased
+    );
+    productPurchased.append(productImagePurchased, nameDescriptionPurchased);
+    productsPurchased.append(productPurchased);
+  });
 };
-catalogAndCartToHTML();
+catalogAndCartToAndPurchasedHTML();
 
 // calculate and display total in cart
 const subtotal = () => {
@@ -268,51 +316,68 @@ const subtotal = () => {
   subtotalText.textContent = `Subtotal: $${subtotal}`;
   taxText.textContent = `Tax: $${taxResult}`;
   totalText.textContent = `Total: $${totalResult}`;
-  confirmationTotal.textContent = `$${totalResult}`; // editing text inside of order confirmation
+  // editing text inside of order confirmation
+  confirmationSubtotal.textContent = `$${subtotal}`;
+  confirmationTax.textContent = `$${taxResult}`;
+  confirmationTotal.textContent = `$${totalResult}`;
   // cash
   cashTotal.textContent = `$${totalResult}`;
-
-  cashOption.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const tenderedContainer = document.querySelector("#cashOption").value;
-    // console.log(tenderedContainer);
-    const cashReturned = tenderedContainer - total;
-    const roundedCashReturned = cashReturned.toFixed(2);
-    const roundedParsedCashReturned = parseFloat(roundedCashReturned);
-
-    // console.log(roundedParsedCashReturned);
-
-    if (roundedParsedCashReturned < 0) {
-      changeDue.textContent = "You owe us more money!";
-      console.log("You owe us more money!");
-    } else if (roundedCashReturned > 0) {
-      changeDue.textContent = "we owe you!";
-      changeDue.textContent = `Return $${roundedCashReturned} to patron`;
-    } else {
-      changeDue.textContent = "perfect!";
-      cashOption.style.display = "none";
-      orderConfirmation.style.display = "block";
-    }
-  });
-
-  // if (cashReturned < 0) {
-  //   changeDue.textContent = "You owe us more money!";
-  // } else if (cashReturned === 0) {
-  //   cashOption.style.display = "none";
-  //   orderConfirmation.style.display = "block";
-  // } else {
-  //   changeDue.textContent = `Return $${roundedCashReturned} to patron`;
-  // }
-
-  // If the user is paying in cash, ask for the amount tendered and provide change.
-  // user cash input - total = Amount owed
-  // const userInput = 10000;
-  // const amountOwed = userInput - totalResult;
-  // console.log(`$${amountOwed} owed`);
 };
-// subtotal();
 
-// something
+cashOption.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const priceSum = fakeCartArray.reduce((acc, obj) => {
+    return acc + obj.price;
+  }, 0);
+
+  const total = priceSum * 1.06;
+
+  const tenderedContainer = document.querySelector("#cashOption").value;
+  // console.log(tenderedContainer);
+  const cashReturned = tenderedContainer - total;
+  const roundedCashReturned = cashReturned.toFixed(2);
+  const roundedParsedCashReturned = parseFloat(roundedCashReturned);
+
+  // console.log(roundedParsedCashReturned);
+
+  if (roundedParsedCashReturned < 0) {
+    changeDue.textContent = "You owe us more money!";
+    console.log("You owe us more money!");
+    console.log(roundedParsedCashReturned);
+  } else if (roundedParsedCashReturned > 0) {
+    amountReturned.textContent = `Returned $${roundedParsedCashReturned} back to patron`;
+    paymentOption.textContent = "Cash";
+    cashOption.style.display = "none";
+    orderConfirmation.style.display = "block";
+
+    console.log(roundedParsedCashReturned);
+  } else {
+    paymentOption.textContent = "Cash";
+    cashOption.style.display = "none";
+    orderConfirmation.style.display = "block";
+
+    console.log(roundedParsedCashReturned);
+  }
+});
+
+creditOption.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  orderConfirmation.style.display = "block";
+  creditOption.style.display = "none";
+  paymentOption.textContent = "Credit";
+});
+
+header.addEventListener("click", (e) => {
+  // open shopping cart button
+  if (e.target.classList.contains("fa-cart-shopping")) {
+    // console.dir(e.target);
+    checkout.style.display = "block";
+    storeHome.style.display = "none";
+    shoppingCart.style.display = "none";
+  }
+});
 
 let foundIndex = null;
 
@@ -330,31 +395,27 @@ body.addEventListener("click", (e) => {
     // console.log(fakeCartArray);
   }
 
-  // open shopping cart button
-  if (e.target.classList.contains("fa-cart-shopping")) {
-    // console.dir(e.target);
-    checkout.style.display = "block";
-    storeHome.style.display = "none";
-  }
-
   // return to home page from shopping cart button
   if (e.target.id === "cartBackArrow") {
     // console.log(e.target.id);
     checkout.style.display = "none";
     storeHome.style.display = "block";
+    shoppingCart.style.display = "block";
   }
 
   // checkout button
   if (e.target.classList.contains("checkoutButton")) {
     // console.dir(e.target);
-    checkout.style.display = "none";
-    shippingInfo.style.display = "block";
+    if (fakeCartArray.length > 0) {
+      checkout.style.display = "none";
+      shippingInfo.style.display = "block";
+    }
   }
-  catalogAndCartToHTML();
+  catalogAndCartToAndPurchasedHTML();
   subtotal();
 });
 
-shippingAndBillingInfo.addEventListener("submit", (e) => {
+shippingInfo.addEventListener("submit", (e) => {
   e.preventDefault(); // prevents reload
 
   const inputEmail = document.querySelector("#e-mail").value;
@@ -381,17 +442,14 @@ shippingAndBillingInfo.addEventListener("submit", (e) => {
 
   const credit = document.querySelector("#credit").checked;
   if (credit) {
-    creditCardOption.style.display = "block";
-    billingAndCartInfo.style.display = "block";
-    shippingAndBillingInfo.style.display = "none";
+    creditOption.style.display = "block";
+    shippingInfo.style.display = "none";
     // console.log("hi");
   } else {
     cashOption.style.display = "block";
-    shippingAndBillingInfo.style.display = "none";
+    shippingInfo.style.display = "none";
     // console.log("bye");
   }
-
-  // console.log(credit);
 });
 
 const makeConfirmationNumber = () => {
@@ -423,5 +481,5 @@ const makeConfirmationNumber = () => {
 makeConfirmationNumber();
 
 // always repeat at end to update-------------------------------------------------
-catalogAndCartToHTML();
+catalogAndCartToAndPurchasedHTML();
 // subtotal();
