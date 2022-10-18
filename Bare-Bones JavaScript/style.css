@@ -190,3 +190,7 @@ header {
   justify-content: space-evenly;
   margin: 10px;
 }
+
+.redBorder {
+  border: 1px solid red;
+}

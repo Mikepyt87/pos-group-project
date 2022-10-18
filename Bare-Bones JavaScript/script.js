@@ -158,6 +158,8 @@ const shoppingCart = document.querySelector(".fa-cart-shopping");
 const paymentOption = document.querySelector(".paymentOption");
 const productsPurchased = document.querySelector(".productsPurchased");
 const cartTally = document.querySelector(".cartTally");
+const cashOptionInput = document.querySelector("#cashOption");
+const submitButton = document.querySelector(".submit");
 
 // display product arrays on page-----------------------------------------------------------
 const catalogAndCartToHTML = () => {
@@ -346,8 +348,9 @@ cashOption.addEventListener("submit", (e) => {
   // console.log(roundedParsedCashReturned);
 
   if (roundedParsedCashReturned < 0) {
-    cashTotal.style.display = "none";
-    changeDue.textContent = "You still owe us $" + roundedCashReturned * -1;
+    cashTotal.style.color = "red";
+    cashOptionInput.classList.add("redBorder");
+    submitButton.classList.add("redBorder");
     console.log("You owe us more money!");
     console.log(roundedParsedCashReturned);
   } else if (roundedParsedCashReturned > 0) {
@@ -393,7 +396,7 @@ header.addEventListener("click", (e) => {
 let foundIndex = null;
 
 body.addEventListener("click", (e) => {
-  // console.dir(e.target);
+  console.dir(e.target);
 
   // add to cart button
   if (e.target.classList.contains("addToCart")) {
