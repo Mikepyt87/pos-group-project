@@ -345,9 +345,11 @@ cashOption.addEventListener("submit", (e) => {
   // console.log(roundedParsedCashReturned);
 
   if (roundedParsedCashReturned < 0) {
-    changeDue.textContent = "You owe us more money!";
-    console.log("You owe us more money!");
-    console.log(roundedParsedCashReturned);
+    cashTotal.style.display = "none";
+    const newTotal = roundedCashReturned * -1;
+    changeDue.textContent = "You still owe us $" + newTotal;
+    console.log(newTotal);
+    // console.log(roundedParsedCashReturned);
   } else if (roundedParsedCashReturned > 0) {
     amountReturned.textContent = `Returned $${roundedParsedCashReturned} back to patron`;
     paymentOption.textContent = "Cash";
