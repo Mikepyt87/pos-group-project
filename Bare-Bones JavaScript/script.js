@@ -159,7 +159,7 @@ const paymentOption = document.querySelector(".paymentOption");
 const productsPurchased = document.querySelector(".productsPurchased");
 
 // display product arrays on page-----------------------------------------------------------
-const catalogAndCartToAndPurchasedHTML = () => {
+const catalogAndCartToHTML = () => {
   // clear everything in the element before we rebuild:
   productCatalog.innerHTML = "";
 
@@ -252,7 +252,10 @@ const catalogAndCartToAndPurchasedHTML = () => {
     productCheckout.append(productImageCheckout, nameDescriptionPrice);
     productsInCart.append(productCheckout);
   });
+};
+catalogAndCartToHTML();
 
+const orderConfirmationtoHTML = () => {
   fakeCartArray.forEach((item) => {
     // create elements
     const productPurchased = document.createElement("div");
@@ -296,7 +299,7 @@ const catalogAndCartToAndPurchasedHTML = () => {
     productsPurchased.append(productPurchased);
   });
 };
-catalogAndCartToAndPurchasedHTML();
+orderConfirmationtoHTML();
 
 // calculate and display total in cart
 const subtotal = () => {
@@ -411,7 +414,7 @@ body.addEventListener("click", (e) => {
       shippingInfo.style.display = "block";
     }
   }
-  catalogAndCartToAndPurchasedHTML();
+  catalogAndCartToHTML();
   subtotal();
 });
 
@@ -450,6 +453,7 @@ shippingInfo.addEventListener("submit", (e) => {
     shippingInfo.style.display = "none";
     // console.log("bye");
   }
+  orderConfirmationtoHTML();
 });
 
 const makeConfirmationNumber = () => {
@@ -481,5 +485,5 @@ const makeConfirmationNumber = () => {
 makeConfirmationNumber();
 
 // always repeat at end to update-------------------------------------------------
-catalogAndCartToAndPurchasedHTML();
+catalogAndCartToHTML();
 // subtotal();
