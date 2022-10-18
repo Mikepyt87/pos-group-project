@@ -408,8 +408,6 @@ body.addEventListener("click", (e) => {
     fakeCartArray.unshift(catalog[foundIndex]);
     // console.log(fakeCartArray);
     cartTally.textContent = fakeCartArray.length;
-    if (fakeCartArray.length >= 10) {
-    }
   }
 
   // return to home page from shopping cart button
@@ -517,3 +515,4 @@ makeConfirmationNumber();
 // always repeat at end to update-------------------------------------------------
 catalogAndCartToHTML();
 // subtotal();
+console.log(window.innerWidth);

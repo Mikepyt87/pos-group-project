@@ -14,6 +14,7 @@ i {
 }
 
 body {
+  height: 100vh;
   background: linear-gradient(
     100deg,
     rgba(255, 255, 255, 1) 0%,
@@ -54,6 +55,7 @@ header {
   left: 39px;
   font-size: 20px;
   font-weight: bold;
+  user-select: none;
 }
 
 #productCatalog {
@@ -117,6 +119,7 @@ header {
   font-size: 17px;
   background-color: #ff4850;
 }
+
 /* style for products on home page */
 #checkout {
   background: rgb(255, 255, 255);

@@ -70,30 +70,29 @@
             name="first_name"
             id="first_name"
             placeholder="First name"
-          />
+          required/>
           <label for="last_name"></label>
           <input
             type="text"
             name="last_name"
             id="last_name"
             placeholder="Last name"
-          />
+            required/>
           <label for="address_line1"></label>
           <input
             type="text"
             name="address_line1"
             id="address_line1"
             placeholder="Address line 1"
-          />
+            required/>
           <label for="address_line2"></label>
           <input
             type="text"
             name="address_line2"
             id="address_line2"
-            placeholder="Address line 2 (optional)"
-          />
+            placeholder="Address line 2 (optional)"/>
           <label for="city"></label>
-          <input type="text" name="city" id="city" placeholder="City" />
+          <input type="text" name="city" id="city" placeholder="City" required/>
           <label for="state"></label>
           <select name="state" id="state">
             <option value=""></option>
@@ -158,15 +157,14 @@
             name="zip_code"
             id="zip_code"
             placeholder="Zip code"
-          />
+            required/>
           <div>
-            <input type="radio" id="cash" name="paymentOption" value="cash"
-                   >
+            <input type="radio" id="cash" name="paymentOption" value="cash" checked>
             <label for="cash">Cash</label>
           </div>
       
           <div>
-            <input type="radio" id="credit" name="paymentOption" value="card" checked>  
+            <input type="radio" id="credit" name="paymentOption" value="card">  
             <label for="card">Credit</label>
           </div>
           <button>Continue</button>
@@ -183,7 +181,7 @@
         id="cashOption"
         step=".01"
         placeholder="0.00"
-        >
+        required>
         <button class="submit">Submit</button>
         
       </div>
@@ -192,37 +190,29 @@
           <img src="assets/back-arrow.svg" alt="back arrow" id="creditBackArrow">
           <p>Billing Information</p>
           <label for="e-mail"></label>
-          <input type="email" name="e-mail" id="e-mail" placeholder="E-Mail" />
+          <input type="email" name="e-mail" id="e-mail" placeholder="E-Mail" required/>
           <label for="first_name"></label>
           <input
             type="text"
             name="first_name"
             id="first_name"
             placeholder="First name"
-          />
-          <label for="last_name"></label>
-          <input
-            type="text"
-            name="last_name"
-            id="last_name"
-            placeholder="Last name"
-          />
+            required/>
           <label for="address_line1"></label>
           <input
             type="text"
             name="address_line1"
             id="address_line1"
             placeholder="Address line 1"
-          />
+            required/>
           <label for="address_line2"></label>
           <input
             type="text"
             name="address_line2"
             id="address_line2"
-            placeholder="Address line 2 (optional)"
-          />
+            placeholder="Address line 2 (optional)"/>
           <label for="city"></label>
-          <input type="text" name="city" id="city" placeholder="City" />
+          <input type="text" name="city" id="city" placeholder="City" required/>
           <label for="state"></label>
           <select name="state" id="state">
             <option value=""></option>
@@ -287,7 +277,7 @@
             name="zip_code"
             id="zip_code"
             placeholder="Zip code"
-          />
+            required/>
           <section class="creditCardOption" id="creditCardOption">
             <label for="card_number"></label>
             <input
@@ -295,7 +285,7 @@
               name="card_number"
               id="card_number"
               placeholder="Card number"
-            />
+              required/>
             <label for="state"></label>
             <select name="state" id="state">
               <option value=""></option>
@@ -355,16 +345,16 @@
               <option value="wy">WY</option>
             </select>
             <label for="month"></label>
-            <input type="month" name="month" id="month" />
+            <input type="month" name="month" id="month" required/>
             <label for="text"></label>
             <input
               type="full_name"
               name="full_name"
               id="full_name"
               placeholder="Name on card"
-            />
+              required/>
             <label for="text"></label>
-            <input type="number" name="cvv" id="cvv" placeholder="CVV" />
+            <input type="number" name="cvv" id="cvv" placeholder="CVV" required/>
           </section>
           <button>Place Your Order</button>
         </form>
@@ -382,20 +372,19 @@
       <p>Ground</p>
       <p>Payment Method</p>
       <p class="paymentOption"></p>
-      <p>subtotal</p>
+      <p>subtotal:</p>
       <p id="confirmationSubtotal">$0.00</p>
-      <p>Tax</p>
+      <p>Tax:</p>
       <p id="confirmationTax">$0.00</p>
-      <p>Total</p>
+      <p>Total:</p>
       <p id="confirmationTotal">$0.00</p>
       <p>Your order is being shipped to:</p>
       <p id="deliveryAddress">Robert Robertson, 1234 NW Bobcat Lane, St. Robert, MO 65584</p>
-      <form action=""><button>Continue Shopping</button></form>
       <div class="productsPurchased">
       </div>
+      <form><button>Continue Shopping</button></form>
     </section>
     <!-- keep JS at the bottom -->
-    
     <script src="script.js"></script>
   </body>
 </html>
