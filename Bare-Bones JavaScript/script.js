@@ -347,10 +347,9 @@ cashOption.addEventListener("submit", (e) => {
 
   if (roundedParsedCashReturned < 0) {
     cashTotal.style.display = "none";
-    const newTotal = roundedCashReturned * -1;
-    changeDue.textContent = "You still owe us $" + newTotal;
-    console.log(newTotal);
-    // console.log(roundedParsedCashReturned);
+    changeDue.textContent = "You still owe us $" + roundedCashReturned * -1;
+    console.log("You owe us more money!");
+    console.log(roundedParsedCashReturned);
   } else if (roundedParsedCashReturned > 0) {
     amountReturned.textContent = `Returned $${roundedParsedCashReturned} back to patron`;
     paymentOption.textContent = "Cash";
@@ -365,7 +364,6 @@ cashOption.addEventListener("submit", (e) => {
 
     console.log(roundedParsedCashReturned);
   }
-  orderConfirmationtoHTML();
 });
 
 creditOption.addEventListener("submit", (e) => {
@@ -374,7 +372,6 @@ creditOption.addEventListener("submit", (e) => {
   orderConfirmation.style.display = "block";
   creditOption.style.display = "none";
   paymentOption.textContent = "Credit";
-  orderConfirmationtoHTML();
 });
 
 header.addEventListener("click", (e) => {
@@ -393,7 +390,7 @@ header.addEventListener("click", (e) => {
 let foundIndex = null;
 
 body.addEventListener("click", (e) => {
-  console.dir(e.target);
+  // console.dir(e.target);
 
   // add to cart button
   if (e.target.classList.contains("addToCart")) {
@@ -417,31 +414,12 @@ body.addEventListener("click", (e) => {
     shoppingCart.style.display = "block";
   }
 
-  // return to cart from shipping info page
-  if (e.target.id === "shippingBackArrow") {
-    checkout.style.display = "block";
-    shippingInfo.style.display = "none";
-  }
-
-  // return to shipping info page from cash option
-  if (e.target.id === "cashBackArrow") {
-    shippingInfo.style.display = "block";
-    cashOption.style.display = "none";
-  }
-
-  // return to shipping info page from credit option
-  if (e.target.id === "creditBackArrow") {
-    shippingInfo.style.display = "block";
-    creditOption.style.display = "none";
-  }
-
   // checkout button
   if (e.target.classList.contains("checkoutButton")) {
     // console.dir(e.target);
     if (fakeCartArray.length > 0) {
       checkout.style.display = "none";
       shippingInfo.style.display = "block";
-      cashOption.style.display = "none";
     }
   }
   catalogAndCartToHTML();
@@ -483,6 +461,7 @@ shippingInfo.addEventListener("submit", (e) => {
     shippingInfo.style.display = "none";
     // console.log("bye");
   }
+  orderConfirmationtoHTML();
 });
 
 const makeConfirmationNumber = () => {
