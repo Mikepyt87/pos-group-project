@@ -20,3 +20,5 @@ form.addEventListener("submit", (e) => {
     moneyOwed.textContent = `$${newTotal}`;
   }
 });
+
+// remaining money input returns 0

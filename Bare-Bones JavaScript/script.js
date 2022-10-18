@@ -364,6 +364,7 @@ cashOption.addEventListener("submit", (e) => {
 
     console.log(roundedParsedCashReturned);
   }
+  orderConfirmationtoHTML();
 });
 
 creditOption.addEventListener("submit", (e) => {
@@ -372,6 +373,7 @@ creditOption.addEventListener("submit", (e) => {
   orderConfirmation.style.display = "block";
   creditOption.style.display = "none";
   paymentOption.textContent = "Credit";
+  orderConfirmationtoHTML();
 });
 
 header.addEventListener("click", (e) => {
@@ -384,6 +386,7 @@ header.addEventListener("click", (e) => {
     checkout.style.display = "block";
     storeHome.style.display = "none";
     shoppingCart.style.display = "none";
+    cartTally.style.display = "none";
   }
 });
 
@@ -412,6 +415,23 @@ body.addEventListener("click", (e) => {
     checkout.style.display = "none";
     storeHome.style.display = "block";
     shoppingCart.style.display = "block";
+    cartTally.style.display = "block";
+  }
+
+  if (e.target.id === "shippingBackArrow") {
+    // console.log(e.target.id);
+    checkout.style.display = "block";
+    shippingInfo.style.display = "none";
+  }
+
+  if (e.target.id === "cashBackArrow") {
+    cashOption.style.display = "none";
+    shippingInfo.style.display = "block";
+  }
+
+  if (e.target.id === "creditBackArrow") {
+    creditOption.style.display = "none";
+    shippingInfo.style.display = "block";
   }
 
   // checkout button
@@ -461,7 +481,6 @@ shippingInfo.addEventListener("submit", (e) => {
     shippingInfo.style.display = "none";
     // console.log("bye");
   }
-  orderConfirmationtoHTML();
 });
 
 const makeConfirmationNumber = () => {
