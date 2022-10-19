@@ -358,12 +358,12 @@ cashOption.addEventListener("submit", (e) => {
     paymentOption.textContent = "Cash";
     cashOption.style.display = "none";
     orderConfirmation.style.display = "block";
-
     console.log(roundedParsedCashReturned);
   } else {
     paymentOption.textContent = "Cash";
     cashOption.style.display = "none";
     orderConfirmation.style.display = "block";
+    amountReturned.style.display = "none";
 
     console.log(roundedParsedCashReturned);
   }
@@ -376,6 +376,7 @@ creditOption.addEventListener("submit", (e) => {
   orderConfirmation.style.display = "block";
   creditOption.style.display = "none";
   paymentOption.textContent = "Credit";
+  amountReturned.style.display = "none";
   orderConfirmationtoHTML();
 });
 
@@ -396,7 +397,7 @@ header.addEventListener("click", (e) => {
 let foundIndex = null;
 
 body.addEventListener("click", (e) => {
-  console.dir(e.target);
+  // console.dir(e.target);
 
   // add to cart button
   if (e.target.classList.contains("addToCart")) {
@@ -514,5 +515,3 @@ makeConfirmationNumber();
 
 // always repeat at end to update-------------------------------------------------
 catalogAndCartToHTML();
-// subtotal();
-console.log(window.innerWidth);

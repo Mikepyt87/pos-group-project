@@ -15,9 +15,13 @@
   </head>
   <body>
     <header>
-      <i class="fa-solid fa-cart-shopping fa-5x"></i>
+      <div class="shopping-cart">
+      <i class="fa-solid fa-cart-shopping fa-3x"></i>
       <!-- change the 5x to resize cart icon (4x is smaller, 6x is bigger, etc) -->
+      <div class="tally-background">
       <p class="cartTally">0</p>
+    </div>
+  </div>
       <script src="https://kit.fontawesome.com/73cad7b292.js" crossorigin="anonymous"></script> <!-- exception -->
     </header>
       <section id="storeHome">
@@ -60,10 +64,11 @@
     <section id="shippingInfo">
       <form class="shippingAndBillingInfo">
         <img src="assets/back-arrow.svg" alt="back arrow" id="shippingBackArrow">
-        <p>Shipping information</p>
+        <p class="shippingHeader">Shipping information</p>
         <section>
           <label for="e-mail"></label>
           <input type="email" name="e-mail" id="e-mail" placeholder="E-Mail" />
+          <div>
           <label for="first_name"></label>
           <input
             type="text"
@@ -78,6 +83,8 @@
             id="last_name"
             placeholder="Last name"
             required/>
+          </div>
+          <div>
           <label for="address_line1"></label>
           <input
             type="text"
@@ -85,12 +92,14 @@
             id="address_line1"
             placeholder="Address line 1"
             required/>
+          </div>
           <label for="address_line2"></label>
           <input
             type="text"
             name="address_line2"
             id="address_line2"
             placeholder="Address line 2 (optional)"/>
+            <div>
           <label for="city"></label>
           <input type="text" name="city" id="city" placeholder="City" required/>
           <label for="state"></label>
@@ -151,6 +160,7 @@
             <option value="wi">WI</option>
             <option value="wy">WY</option>
           </select>
+        </div>
           <label for="zip_code"></label>
           <input
             type="number"
@@ -167,7 +177,7 @@
             <input type="radio" id="credit" name="paymentOption" value="card">  
             <label for="card">Credit</label>
           </div>
-          <button>Continue</button>
+          <button class="continue">Continue</button>
         </section>
       </form>
       <form class="cashOption">
@@ -180,17 +190,18 @@
         name="cashOption"
         id="cashOption"
         step=".01"
-        placeholder="0.00"
-        required>
+        placeholder="0.00">
         <button class="submit">Submit</button>
         
       </div>
       </form>
         <form class="creditOption">
           <img src="assets/back-arrow.svg" alt="back arrow" id="creditBackArrow">
-          <p>Billing Information</p>
+          <p class="shippingHeader">Billing Information</p>
+          <div>
           <label for="e-mail"></label>
           <input type="email" name="e-mail" id="e-mail" placeholder="E-Mail" required/>
+        </div>
           <label for="first_name"></label>
           <input
             type="text"
@@ -198,6 +209,7 @@
             id="first_name"
             placeholder="First name"
             required/>
+            <div>
           <label for="address_line1"></label>
           <input
             type="text"
@@ -205,12 +217,14 @@
             id="address_line1"
             placeholder="Address line 1"
             required/>
+          </div>
           <label for="address_line2"></label>
           <input
             type="text"
             name="address_line2"
             id="address_line2"
             placeholder="Address line 2 (optional)"/>
+            <div>
           <label for="city"></label>
           <input type="text" name="city" id="city" placeholder="City" required/>
           <label for="state"></label>
@@ -271,6 +285,7 @@
             <option value="wi">WI</option>
             <option value="wy">WY</option>
           </select>
+        </div>
           <label for="zip_code"></label>
           <input
             type="number"
@@ -279,6 +294,7 @@
             placeholder="Zip code"
             required/>
           <section class="creditCardOption" id="creditCardOption">
+            <p class="shippingHeader">Credit Card Information</p>
             <label for="card_number"></label>
             <input
               type="number"
@@ -346,43 +362,47 @@
             </select>
             <label for="month"></label>
             <input type="month" name="month" id="month" required/>
-            <label for="text"></label>
+<div>
+            <label for="full_name"></label>
             <input
               type="full_name"
               name="full_name"
               id="full_name"
               placeholder="Name on card"
               required/>
-            <label for="text"></label>
+            <label for="cvv"></label>
             <input type="number" name="cvv" id="cvv" placeholder="CVV" required/>
+          </div>
           </section>
           <button>Place Your Order</button>
         </form>
     <section class="orderConfirmation" id="orderConfirmation">
       <p class="amountReturned"></p>
-      <p>Your confirmation number is</p>
+      <div class="confirmationBorder">
+      <p class="boldInConfirmation">Your confirmation number is</p>
       <p id="confirmationNumber">12345678</p>
-      <p>Date Placed</p>
+      <p class="boldInConfirmation">Date Placed</p>
       <p id="datePlaced">00/00/0000</p>
-      <p>P.O. #</p>
+      <p class="boldInConfirmation">P.O. #</p>
       <p id="poAccount">DJM12345</p>
-      <p>order placed by</p>
+      <p class="boldInConfirmation">Order placed by</p>
       <p>Guest</p>
-      <p>Shipping Method</p>
+      <p class="boldInConfirmation">Shipping Method</p>
       <p>Ground</p>
-      <p>Payment Method</p>
+      <p class="boldInConfirmation">Payment Method</p>
       <p class="paymentOption"></p>
-      <p>subtotal:</p>
+      <p class="boldInConfirmation">subtotal:</p>
       <p id="confirmationSubtotal">$0.00</p>
-      <p>Tax:</p>
+      <p class="boldInConfirmation">Tax:</p>
       <p id="confirmationTax">$0.00</p>
-      <p>Total:</p>
+      <p class="boldInConfirmation">Total:</p>
       <p id="confirmationTotal">$0.00</p>
-      <p>Your order is being shipped to:</p>
+      <p class="boldInConfirmation">Your order is being shipped to:</p>
       <p id="deliveryAddress">Robert Robertson, 1234 NW Bobcat Lane, St. Robert, MO 65584</p>
+    </div>
       <div class="productsPurchased">
       </div>
-      <form><button>Continue Shopping</button></form>
+      <form class="reset"><button class="resetButton">Continue Shopping</button></form>
     </section>
     <!-- keep JS at the bottom -->
     <script src="script.js"></script>

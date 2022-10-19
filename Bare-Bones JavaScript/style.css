@@ -15,11 +15,7 @@ i {
 
 body {
   height: 100vh;
-  background: linear-gradient(
-    100deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(164, 164, 164, 1) 100%
-  );
+  background-color: #c6c7c5;
   font-family: "Montserrat", sans-serif;
 }
 
@@ -45,16 +41,33 @@ section {
 /* style for products on home page */
 header {
   display: flex;
-  align-items: center;
+  margin: 10px;
+  height: 85px;
+}
+
+.shopping-cart {
+  position: relative;
+  left: 20px;
+  top: 25px;
+}
+
+.tally-background {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #ff4850;
+  position: relative;
+  bottom: 65px;
+  left: 35px;
 }
 
 .cartTally {
   color: white;
   position: absolute;
-  top: 14px;
-  left: 39px;
-  font-size: 20px;
-  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20;
   user-select: none;
 }
 
@@ -120,16 +133,16 @@ header {
   background-color: #ff4850;
 }
 
+.addToCart:hover {
+  transform: scale(0.95);
+  border: 1px solid black;
+}
+
 /* style for products on home page */
 #checkout {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    36deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(164, 164, 164, 1) 100%
-  );
+  background-color: #c6c7c5;
   width: 100vw;
-  height: 106vh;
+  height: 105vh;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -138,8 +151,9 @@ header {
 
 /* style for checkout */
 #cartBackArrow {
-  width: 100px;
+  width: 90px;
 }
+
 .productCheckout {
   border-bottom: 1px solid black;
   display: flex;
@@ -187,13 +201,83 @@ header {
 /* style for checkout */
 
 /* style for cash option */
+#shippingBackArrow {
+  width: 90px;
+}
+
+#cashBackArrow {
+  width: 90px;
+}
+
+#creditBackArrow {
+  width: 90px;
+}
+
 .tenderedContainer {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  margin: 10px;
+  align-items: center;
+  margin: 20px;
+  width: 480px;
 }
 
 .redBorder {
   border: 1px solid red;
+}
+
+/* style for confirmation page */
+
+.amountReturned {
+  font-weight: bold;
+  font-size: 20px;
+  border: 2px dashed black;
+  padding: 25px;
+  width: 400px;
+  margin: 10px;
+}
+
+.confirmationBorder {
+  border: 3px black;
+  border-style: solid none;
+}
+
+.confirmationBorder p {
+  font-size: 20px;
+  margin: 5px;
+}
+
+.boldInConfirmation {
+  font-weight: bold;
+}
+
+.shippingHeader {
+  font-weight: bold;
+  margin: 5px;
+  font-size: 18px;
+}
+
+input {
+  margin: 5px;
+}
+
+.continue {
+  margin: 5px;
+  padding: 10px;
+}
+
+.submit {
+  padding: 10px;
+}
+
+.reset {
+  display: flex;
+  justify-content: center;
+}
+.resetButton {
+  padding: 10px;
+  width: 350px;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 15px;
 }
