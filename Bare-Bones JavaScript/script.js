@@ -12,9 +12,9 @@
 
 // If the user is paying with a card, ask for the card number, expiration, and CVV.✓
 
-// Provide a receipt for the payment which includes the item(s) bought, the subtotal, total, and anything else of interest.
+// Provide a receipt for the payment which includes the item(s) bought, the subtotal, total, and anything else of interest.✓
 
-// add required at the end of all input elements
+// add required at the end of all input elements✓
 
 // A stretch goal is to implement validation for credit card numbers...
 
@@ -471,7 +471,7 @@ shippingInfo.addEventListener("submit", (e) => {
   //   inputZip
   // );
 
-  deliveryAddress.textContent = `${inputFirstName} ${inputLastName}, ${inputAddressLine1}, ${inputState} ${inputZip}`;
+  deliveryAddress.textContent = `${inputFirstName} ${inputLastName}, ${inputAddressLine1}, ${inputCity}, ${inputState} ${inputZip}`;
 
   const credit = document.querySelector("#credit").checked;
   if (credit) {
