@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ten Below</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="shopping-cart">
+      <i class="fa-solid fa-cart-shopping fa-3x"></i>
+      <!-- change the 5x to resize cart icon (4x is smaller, 6x is bigger, etc) -->
+      <div class="tally-background">
+      <p class="cartTally">0</p>
+    </div>
+  </div>
+      <script src="https://kit.fontawesome.com/73cad7b292.js" crossorigin="anonymous"></script> <!-- exception -->
+    </header>
+      <section id="storeHome">
+      <div id="productCatalog">
+        <div class="product">
+          <img class="productImage" src="assets/ASUS.png" alt="laptop">
+          <div class="nameAndPrice">
+            <div class="brandAndModel">
+            <p class="productBrand">ASUS</p>
+            <p class="productModel">BR1100CKA-YS02</p>
+          </div>
+            <p class="productPrice">$99.99</p>
+          </div>
+            <p class="description">Built to military-grade standards...</p>
+            <button class="addToCart">Add to cart</button>
+            </div>
+    </section>
+    <section id="checkout">
+      <img src="assets/back-arrow.svg" alt="back arrow" id="cartBackArrow">
+      <div id="productsInCart">
+        <div class="productCheckout">
+          <img class="productImageCheckout" src="assets/ASUS.png" alt="laptop">
+          <div class="name-description-price">
+            <div class="brandAndModelCheckout">
+          <p class="productBrandCheckout">ASUS</p>
+          <p class="productModelCheckout">BR1100CKA-YS02</p>
+        </div>
+          <p class="productDescriptionCheckout">Built to military-grade standards...</p>
+            <p class="productPriceCheckout">$99.99</p>
+        </div>
+        </div>
+      </div>
+      <div class="totalCost">
+      <p id="subtotal">Subtotal: $0.00</p>
+      <p id="tax">Tax: $0.00</p>
+      <p id="total">Total: $0.00</p>
+    </div>
+      <button class="checkoutButton">Check out</button>
+    </section>  
+    <section id="shippingInfo">
+      <form class="shippingAndBillingInfo">
+        <img src="assets/back-arrow.svg" alt="back arrow" id="shippingBackArrow">
+        <p class="shippingHeader">Shipping information</p>
+        <section>
+          <label for="e-mail"></label>
+          <input type="email" name="e-mail" id="e-mail" placeholder="E-Mail" />
+          <div>
+          <label for="first_name"></label>
+          <input
+            type="text"
+            name="first_name"
+            id="first_name"
+            placeholder="First name"
+          required/>
+          <label for="last_name"></label>
+          <input
+            type="text"
+            name="last_name"
+            id="last_name"
+            placeholder="Last name"
+            required/>
+          </div>
+          <div>
+          <label for="address_line1"></label>
+          <input
+            type="text"
+            name="address_line1"
+            id="address_line1"
+            placeholder="Address line 1"
+            required/>
+          </div>
+          <label for="address_line2"></label>
+          <input
+            type="text"
+            name="address_line2"
+            id="address_line2"
+            placeholder="Address line 2 (optional)"/>
+            <div>
+          <label for="city"></label>
+          <input type="text" name="city" id="city" placeholder="City" required/>
+          <label for="state"></label>
+          <select name="state" id="state">
+            <option value=""></option>
+            <option value="al">AL</option>
+            <option value="ak">AK</option>
+            <option value="az">AZ</option>
+            <option value="ar">AR</option>
+            <option value="ca">CA</option>
+            <option value="co">CO</option>
+            <option value="ct">CT</option>
+            <option value="de">DE</option>
+            <option value="dc">DC</option>
+            <option value="fl">FL</option>
+            <option value="ga">GA</option>
+            <option value="gu">GU</option>
+            <option value="hi">HI</option>
+            <option value="id">ID</option>
+            <option value="il">IL</option>
+            <option value="in">IN</option>
+            <option value="ia">IA</option>
+            <option value="ks">KS</option>
+            <option value="ky">KY</option>
+            <option value="la">LA</option>
+            <option value="me">ME</option>
+            <option value="md">MD</option>
+            <option value="ma">MA</option>
+            <option value="mi">MI</option>
+            <option value="mn">MN</option>
+            <option value="ms">MS</option>
+            <option value="mo">MO</option>
+            <option value="mt">MT</option>
+            <option value="ne">NE</option>
+            <option value="nv">NV</option>
+            <option value="nh">NH</option>
+            <option value="nj">NJ</option>
+            <option value="nm">NM</option>
+            <option value="ny">NY</option>
+            <option value="nc">NC</option>
+            <option value="nd">ND</option>
+            <option value="oh">OH</option>
+            <option value="ok">OK</option>
+            <option value="or">OR</option>
+            <option value="pa">PA</option>
+            <option value="pr">PR</option>
+            <option value="ri">RI</option>
+            <option value="sc">SC</option>
+            <option value="sd">SD</option>
+            <option value="tn">TN</option>
+            <option value="tx">TX</option>
+            <option value="ut">UT</option>
+            <option value="vt">VT</option>
+            <option value="vi">VI</option>
+            <option value="va">VA</option>
+            <option value="wa">WA</option>
+            <option value="wv">WV</option>
+            <option value="wi">WI</option>
+            <option value="wy">WY</option>
+          </select>
+        </div>
+          <label for="zip_code"></label>
+          <input
+            type="number"
+            name="zip_code"
+            id="zip_code"
+            placeholder="Zip code"
+            required/>
+          <div>
+            <input type="radio" id="cash" name="paymentOption" value="cash" checked>
+            <label for="cash">Cash</label>
+          </div>
+      
+          <div>
+            <input type="radio" id="credit" name="paymentOption" value="card">  
+            <label for="card">Credit</label>
+          </div>
+          <button class="continue">Continue</button>
+        </section>
+      </form>
+      <form class="cashOption">
+        <img src="assets/back-arrow.svg" alt="back arrow" id="cashBackArrow">
+        <label for="cashOption">Cash</label>
+        <div class="tenderedContainer">
+                  <p class="changeDue"></p>
+                  <p class="cashTotal">total</p>
+        <input type="number"
+        name="cashOption"
+        id="cashOption"
+        step=".01"
+        placeholder="0.00">
+        <button class="submit">Submit</button>
+        
+      </div>
+      </form>
+        <form class="creditOption">
+          <img src="assets/back-arrow.svg" alt="back arrow" id="creditBackArrow">
+          <p class="shippingHeader">Billing Information</p>
+          <div>
+          <label for="e-mail"></label>
+          <input type="email" name="e-mail" id="e-mail" placeholder="E-Mail" required/>
+        </div>
+          <label for="first_name"></label>
+          <input
+            type="text"
+            name="first_name"
+            id="first_name"
+            placeholder="First name"
+            required/>
+            <div>
+          <label for="address_line1"></label>
+          <input
+            type="text"
+            name="address_line1"
+            id="address_line1"
+            placeholder="Address line 1"
+            required/>
+          </div>
+          <label for="address_line2"></label>
+          <input
+            type="text"
+            name="address_line2"
+            id="address_line2"
+            placeholder="Address line 2 (optional)"/>
+            <div>
+          <label for="city"></label>
+          <input type="text" name="city" id="city" placeholder="City" required/>
+          <label for="state"></label>
+          <select name="state" id="state">
+            <option value=""></option>
+            <option value="al">AL</option>
+            <option value="ak">AK</option>
+            <option value="az">AZ</option>
+            <option value="ar">AR</option>
+            <option value="ca">CA</option>
+            <option value="co">CO</option>
+            <option value="ct">CT</option>
+            <option value="de">DE</option>
+            <option value="dc">DC</option>
+            <option value="fl">FL</option>
+            <option value="ga">GA</option>
+            <option value="gu">GU</option>
+            <option value="hi">HI</option>
+            <option value="id">ID</option>
+            <option value="il">IL</option>
+            <option value="in">IN</option>
+            <option value="ia">IA</option>
+            <option value="ks">KS</option>
+            <option value="ky">KY</option>
+            <option value="la">LA</option>
+            <option value="me">ME</option>
+            <option value="md">MD</option>
+            <option value="ma">MA</option>
+            <option value="mi">MI</option>
+            <option value="mn">MN</option>
+            <option value="ms">MS</option>
+            <option value="mo">MO</option>
+            <option value="mt">MT</option>
+            <option value="ne">NE</option>
+            <option value="nv">NV</option>
+            <option value="nh">NH</option>
+            <option value="nj">NJ</option>
+            <option value="nm">NM</option>
+            <option value="ny">NY</option>
+            <option value="nc">NC</option>
+            <option value="nd">ND</option>
+            <option value="oh">OH</option>
+            <option value="ok">OK</option>
+            <option value="or">OR</option>
+            <option value="pa">PA</option>
+            <option value="pr">PR</option>
+            <option value="ri">RI</option>
+            <option value="sc">SC</option>
+            <option value="sd">SD</option>
+            <option value="tn">TN</option>
+            <option value="tx">TX</option>
+            <option value="ut">UT</option>
+            <option value="vt">VT</option>
+            <option value="vi">VI</option>
+            <option value="va">VA</option>
+            <option value="wa">WA</option>
+            <option value="wv">WV</option>
+            <option value="wi">WI</option>
+            <option value="wy">WY</option>
+          </select>
+        </div>
+          <label for="zip_code"></label>
+          <input
+            type="number"
+            name="zip_code"
+            id="zip_code"
+            placeholder="Zip code"
+            required/>
+          <section class="creditCardOption" id="creditCardOption">
+            <p class="shippingHeader">Credit Card Information</p>
+            <label for="card_number"></label>
+            <input
+              type="number"
+              name="card_number"
+              id="card_number"
+              placeholder="Card number"
+              required/>
+            <label for="state"></label>
+            <select name="state" id="state">
+              <option value=""></option>
+              <option value="al">AL</option>
+              <option value="ak">AK</option>
+              <option value="az">AZ</option>
+              <option value="ar">AR</option>
+              <option value="ca">CA</option>
+              <option value="co">CO</option>
+              <option value="ct">CT</option>
+              <option value="de">DE</option>
+              <option value="dc">DC</option>
+              <option value="fl">FL</option>
+              <option value="ga">GA</option>
+              <option value="gu">GU</option>
+              <option value="hi">HI</option>
+              <option value="id">ID</option>
+              <option value="il">IL</option>
+              <option value="in">IN</option>
+              <option value="ia">IA</option>
+              <option value="ks">KS</option>
+              <option value="ky">KY</option>
+              <option value="la">LA</option>
+              <option value="me">ME</option>
+              <option value="md">MD</option>
+              <option value="ma">MA</option>
+              <option value="mi">MI</option>
+              <option value="mn">MN</option>
+              <option value="ms">MS</option>
+              <option value="mo">MO</option>
+              <option value="mt">MT</option>
+              <option value="ne">NE</option>
+              <option value="nv">NV</option>
+              <option value="nh">NH</option>
+              <option value="nj">NJ</option>
+              <option value="nm">NM</option>
+              <option value="ny">NY</option>
+              <option value="nc">NC</option>
+              <option value="nd">ND</option>
+              <option value="oh">OH</option>
+              <option value="ok">OK</option>
+              <option value="or">OR</option>
+              <option value="pa">PA</option>
+              <option value="pr">PR</option>
+              <option value="ri">RI</option>
+              <option value="sc">SC</option>
+              <option value="sd">SD</option>
+              <option value="tn">TN</option>
+              <option value="tx">TX</option>
+              <option value="ut">UT</option>
+              <option value="vt">VT</option>
+              <option value="vi">VI</option>
+              <option value="va">VA</option>
+              <option value="wa">WA</option>
+              <option value="wv">WV</option>
+              <option value="wi">WI</option>
+              <option value="wy">WY</option>
+            </select>
+            <label for="month"></label>
+            <input type="month" name="month" id="month" required/>
+<div>
+            <label for="full_name"></label>
+            <input
+              type="full_name"
+              name="full_name"
+              id="full_name"
+              placeholder="Name on card"
+              required/>
+            <label for="cvv"></label>
+            <input type="number" name="cvv" id="cvv" placeholder="CVV" required/>
+          </div>
+          </section>
+          <button>Place Your Order</button>
+        </form>
+    <section class="orderConfirmation" id="orderConfirmation">
+      <p class="amountReturned"></p>
+      <div class="confirmationBorder">
+      <p class="boldInConfirmation">Your confirmation number is</p>
+      <p id="confirmationNumber">12345678</p>
+      <p class="boldInConfirmation">Date Placed</p>
+      <p id="datePlaced">00/00/0000</p>
+      <p class="boldInConfirmation">P.O. #</p>
+      <p id="poAccount">DJM12345</p>
+      <p class="boldInConfirmation">Order placed by</p>
+      <p>Guest</p>
+      <p class="boldInConfirmation">Shipping Method</p>
+      <p>Ground</p>
+      <p class="boldInConfirmation">Payment Method</p>
+      <p class="paymentOption"></p>
+      <p class="boldInConfirmation">subtotal:</p>
+      <p id="confirmationSubtotal">$0.00</p>
+      <p class="boldInConfirmation">Tax:</p>
+      <p id="confirmationTax">$0.00</p>
+      <p class="boldInConfirmation">Total:</p>
+      <p id="confirmationTotal">$0.00</p>
+      <p class="boldInConfirmation">Your order is being shipped to:</p>
+      <p id="deliveryAddress">Robert Robertson, 1234 NW Bobcat Lane, St. Robert, MO 65584</p>
+    </div>
+      <div class="productsPurchased">
+      </div>
+      <form class="reset"><button class="resetButton">Continue Shopping</button></form>
+      
+    </section>
+    <!-- keep JS at the bottom -->
+    <!-- <footer class="footer"></footer> -->
+    <script src="script.js"></script>
+  </body>
+</html>
