@@ -152,6 +152,7 @@ header {
 /* style for checkout */
 #cartBackArrow {
   width: 90px;
+  margin: 10px;
 }
 
 .productCheckout {
@@ -203,14 +204,17 @@ header {
 /* style for cash option */
 #shippingBackArrow {
   width: 90px;
+  margin: 10px;
 }
 
 #cashBackArrow {
   width: 90px;
+  margin: 10px;
 }
 
 #creditBackArrow {
   width: 90px;
+  margin: 10px;
 }
 
 .tenderedContainer {
@@ -280,4 +284,8 @@ input {
   font-size: 20px;
   font-weight: bold;
   margin: 15px;
+}
+
+#productsInCart {
+  border-top: 1px solid black;
 }
