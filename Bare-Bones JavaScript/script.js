@@ -115,10 +115,6 @@ const catalog = [
 
 const fakeCartArray = [];
 
-// const userLocationInfo = [];
-
-const userCreditCardInfo = [];
-
 // selectors--------------------------------------------------------------------------------
 // container that holds products in cart
 const productsInCart = document.querySelector("#productsInCart");
