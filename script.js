@@ -355,15 +355,16 @@ cashOption.addEventListener("submit", (e) => {
     cashOption.style.display = "none";
     orderConfirmation.style.display = "block";
     console.log(roundedParsedCashReturned);
-  } else {
+    orderConfirmationtoHTML();
+  } else if (roundedParsedCashReturned === 0) {
     paymentOption.textContent = "Cash";
     cashOption.style.display = "none";
     orderConfirmation.style.display = "block";
     amountReturned.style.display = "none";
 
     console.log(roundedParsedCashReturned);
+    orderConfirmationtoHTML();
   }
-  orderConfirmationtoHTML();
 });
 
 creditOption.addEventListener("submit", (e) => {
